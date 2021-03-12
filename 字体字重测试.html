@@ -4,14 +4,12 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
     <title>字体字重测试</title>
     <style>
         html {
             -webkit-text-size-adjust: 100%;
-            /* Prevent font scaling in landscape while allowing user zoom */
         }
 
         * {
@@ -22,30 +20,23 @@
 
         html,
         body {
-            padding: 3%;
+            padding: 1.5%;
             line-height: 2em;
         }
 
         h1 {
-            font-size: 2em;
-            line-height: 2em;
+            font-size: 2.8em;
+            line-height: 2.3em;
         }
 
         h2 {
-            font-size: 1.8em;
-            line-height: 2em;
+            font-size: 1.6em;
+            line-height: 1.3em;
         }
 
-        #sans-serif {
-            font-family: "Roboto", sans-serif;
-        }
-
-        #serif {
-            font-family: serif;
-        }
-
-        #monospace {
-            font-family: monospace;
+        h3 {
+            font-size: 1.4em;
+            line-height: 1.3em;
         }
 
         p,
@@ -69,11 +60,11 @@
         #GoFullscreen {
             display: block;
             text-align: center;
-            padding: 10px;
-            margin: 2em 0;
+            padding: 10px 10px;
+            margin: auto;
             background: #eee;
             background-color: #eee;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
             outline: none;
         }
@@ -81,11 +72,12 @@
 </head>
 
 <body>
-    <h1 align="center" style="font-weight:900;">字体字重测试 · Font Weight Test</h1>
-    <div class="text" style=" text-align:center;">包含非衬线、衬线、等宽三种字体类型</div>
+    <h1 align="center">字体字重测试</h1>
+    <h2 align="center">包含非衬线、衬线、等宽三种字体类型</h2>
+    <div id="GoFullscreen">[ 全屏 ]</div>
     <div id="sans-serif">
     <hr>
-        <h2>非衬线体（Roboto, sans-serif）</h2>
+        <h3>非衬线体(sans-serif)</h3>
         <p style="margin: 0; font-weight: 400;">正体</p>
             <span style="font-weight:100;">【100】  这是一个示例 ABCDEFG abcefg 012345</span><br>
             <span style="font-weight:200;">【200】  这是一个示例 ABCDEFG abcefg 012345</span><br>
@@ -194,7 +186,7 @@
     </div>
     <hr>
     <div id="serif">
-        <h2>衬线体（serif）</h2>
+        <h3>衬线体(serif)</h3>
         <p style="margin: 0; font-weight: 400;">正体</p>
             <span style="font-weight:100;">【100】  这是一个示例 ABCDEFG abcefg 012345</span><br>
             <span style="font-weight:200;">【200】  这是一个示例 ABCDEFG abcefg 012345</span><br>
@@ -303,7 +295,7 @@
     </div>
     <hr>
     <div id="monospace">
-        <h2>等宽字体（monosapce）</h2>
+        <h3>等宽字体(monosapce)</h3>
         <p style="margin: 0; font-weight: 400;">正体</p>
             <span style="font-weight:100;">【100】  这是一个示例 ABCDEFG abcefg 012345</span><br>
             <span style="font-weight:200;">【200】  这是一个示例 ABCDEFG abcefg 012345</span><br>
@@ -411,7 +403,7 @@
     </div>
     <hr>
     <p>
-        通用字重名称映射：<br>
+        <h3>通用字重名称映射</h3>
         100 - Thin (Hairline)<br>
         200 - Extra Light (Ultra Light)<br>
         300 - Light<br>
@@ -426,7 +418,6 @@
     </p>
     <hr>
     <script type="text/javascript">
-        /* Toggle Fullscreen */
         function toggleFullscreen(elem) {
             elem = elem || document.documentElement;
             if (!document.fullscreenElement && !document.mozFullScreenElement &&
