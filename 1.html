@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>字体字重の测试</title>
+<style>
+body {
+  font-size: 16px;
+  padding: 2.5%;
+  line-height: 2em;
+}
+h1 {
+    font-size: 1.8em;
+    line-height: 1.4em;
+}
+h2 {
+    font-size: 1.0em;
+    line-height: 0.9em;
+}
+h3 {
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
+#sans-serif {
+    font-family: "Roboto", sans-serif;
+}
+#serif {
+    font-family: serif;
+}
+#monospace {
+    font-family: monospace;
+}
+p,
+hr {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+#GoFullscreen {
+    display: block;
+    text-align: center;
+    max-width: 100px;
+    margin: auto;
+    border-radius: 50px;
+    background-color: #eee;
+    cursor: pointer;
+    outline: none;
+}
+cc:link {
+    color: red;
+    text-decoration: none;
+}
+cc:visited {
+    color: green;
+    text-decoration: none;
+}
+cc:hover {
+    color: hotpink;
+    text-decoration: none;
+}
+cc:active {
+    color: blue;
+    text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1 align="center">字体字重の测试</h1>
+    <p id="hitokoto" align="center" style="font-weight:300;">一言获取中...</p>
+</div>
+
+<ul>
+  <li><a class="active" href="file:///C:/Users/%E4%BD%99%E7%A9%BA/Desktop/1.html">字重映射</a></li>
+  <li><a href="file:///C:/Users/%E4%BD%99%E7%A9%BA/Desktop/2.html">无衬线体</a></li>
+  <li><a href="file:///C:/Users/%E4%BD%99%E7%A9%BA/Desktop/3.html">衬线字体</a></li>
+  <li><a href="file:///C:/Users/%E4%BD%99%E7%A9%BA/Desktop/4.html">等宽字体</a></li>
+  <li style="float:right"><a class="active" href="file:///C:/Users/%E4%BD%99%E7%A9%BA/Desktop/5.html">About</a></li>
+</ul>
+<p style="margin: 20px;">
+    <span style="font-weight:100;">100 - 淡体 Thin /Hairline</span><br>
+    <span style="font-weight:200;">200 - 特细 Extra-Light (Ultra-Light)</span><br>
+    <span style="font-weight:300;">300 - 细体 Light</span><br>
+    <span style="font-weight:350;">350 - 次细 Demi-Light</span><br>
+    <span style="font-weight:400;">400 - 标准 Regular / Normal / Book / Plain</span><br>
+    <span style="font-weight:500;">500 - 适中 Medium</span><br>
+    <span style="font-weight:600;">600 - 次粗 Demi-Bold / Semi-Bold</span><br>
+    <span style="font-weight:700;">700 - 粗体 Bold</span><br>
+    <span style="font-weight:800;">800 - 特粗 Extra-bold / Extra</span><br>
+    <span style="font-weight:900;">900 - 浓体 Black / Heavy</span><br>
+    <span style="font-weight:950;">950 - 特浓 Extra-Black (Ultra-Black)</span><br></p>
+</body>
+
+<script>
+fetch('https://v1.hitokoto.cn')
+.then(response => response.json())
+.then(data => {
+    const hitokoto = document.getElementById('hitokoto')
+    hitokoto.innerText = data.hitokoto + '——' +data.from + ''
+})
+.catch(console.error)
+</script>
+
+</html>
