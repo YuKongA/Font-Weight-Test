@@ -1,7 +1,3 @@
-## Font Weight Test
-字体字重の测试
-https://font-weight-test.vercel.app/
-
 <h1 align="center">字体字重の测试</h1>
 
 <div align="center">
