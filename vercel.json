@@ -1,0 +1,10 @@
+{
+  "trailingSlash": true
+}
+{
+  "version": 2,
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+  ]
+}
