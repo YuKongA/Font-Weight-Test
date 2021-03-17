@@ -1,5 +1,10 @@
 ## Font Weight Test
-字体字重の测试 
+字体字重の测试
+https://font-weight-test.vercel.app/
 
-### [NEW](https://yukonga.github.io/Font_Weight_Test/1.html)
-### [OLD](https://yukonga.github.io/Font_Weight_Test/%E5%AD%97%E4%BD%93%E5%AD%97%E9%87%8D%E6%B5%8B%E8%AF%95.html)
+<h1 align="center">字体字重の测试</h1>
+
+<div align="center">
+    <p><strong><a href="https://font-weight-test.vercel.app/">[ 访问 ]</a></strong></p>
+    <p><a href="https://font-weight-test.vercel.app/"><img alt="YuK.png" src="https://cdn.jsdelivr.net/gh/YuKongA/Font_Weight_Test@main/YuK.png"></a></p>
+</div>
