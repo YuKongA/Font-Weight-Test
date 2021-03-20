@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
+<link rel="shortcut icon" url="favicon.ico">
 <title>字体字重の测试</title>
 <style>
 * {
@@ -26,7 +28,7 @@ h3 {
     line-height: 1.2em;
 }
 #sans-serif {
-    font-family: "Roboto", sans-serif;
+    font-family: sans-serif;
 }
 #serif {
     font-family: serif;
@@ -65,6 +67,15 @@ li a:hover {
 .active {
   background-color: #4CAF50;
 }
+.links a {
+  display: inline-block;
+  color: rgb(88, 88, 88);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.links a:hover {
+  color: rgb(0, 130, 255);
+}
 </style>
 </head>
 <body>
@@ -72,19 +83,19 @@ li a:hover {
 <div class="header">
     <h1 align="center">字体字重の测试</h1>
     <p id="hitokoto" align="center" style="font-weight:300;">一言获取中...</p>
-</div>
-
 <ul>
-  <li><a href="https://font-weight-test.vercel.app">首页</a></li>
+  <li><a href="index.html">首页</a></li>
   <li><a href="index2.html">无衬线</a></li>
   <li><a href="index3.html">衬线体</a></li>
   <li><a href="index4.html">等宽体</a></li>
   <li style="float:right"><a class="active" href="index5.html">关于</a></li>
 </ul>
-<p>Vercel </p><p style="margin: 20px;"><b><a href="https://yukonga.vercel.app">[ 余空の主页 ]</a></b></p>
-<p>Coolapk </p><p style="margin: 20px;"><b><a href="https://www.coolapk.com/u/680367/">[ 余空_YuK ]</a></b></p>
-<p>Heroku  </p><p style="margin: 20px;"><b><a href="https://yukongya.herokuapp.com/">[ 余空の杂货间 ]</a></b></p>
-<p>GitHub  </p><p style="margin: 20px;"><b><a href="https://github.com/YuKongA">[ YuKongA ]</a></b></p>
+</div>
+<div class="links">
+<p>Vercel<b><a href="https://yukonga.vercel.app">[ 余空の主页 ]</a></b></p>
+<p>Coolapk<b><a href="https://www.coolapk.com/u/680367/">[ 余空_YuK ]</a></b></p>
+<p>Heroku<b><a href="https://yukongya.herokuapp.com/">[ 余空の杂货间 ]</a></b></p>
+<p>GitHub<b><a href="https://github.com/YuKongA">[ YuKongA ]</a></b></p></div>
 </body>
 <script>
 fetch('https://v1.hitokoto.cn')
