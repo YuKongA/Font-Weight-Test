@@ -1,0 +1,118 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    white-space: nowrap;
+}
+html, body {
+    height: 100%;
+    font-size: 20px;
+    padding: 2.5%;
+    line-height: 2em;
+}
+h1 {
+      font-size: 1.8em;
+      line-height: 1.4em;
+}
+h2 {
+      font-size: 1.0em;
+      line-height: 0.9em;
+}
+h3 {
+      font-size: 1.2em;
+      line-height: 1.2em;
+}
+#roboto {
+      font-family: "Roboto";
+}
+#sans-serif {
+      font-family: sans-serif;
+}
+#serif {
+      font-family: serif;
+}
+#monospace {
+      font-family: monospace;
+}
+p,
+hr {
+      margin-top: 5px;
+      margin-bottom: 20px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+.active {
+    background-color: #4CAF50;
+}
+
+.links a {
+  display: inline-block;
+  color: rgb(88, 88, 88);
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.links a:hover {
+  color: rgb(0, 130, 255);
+}
+
+#footer {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    float: left;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 0;
+    z-index: 11;
+    transition: all .1s ease-out;
+}
+
+#footer:hover {
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 600px) {
+    html, body {
+        font-size: 18px;
+        line-height:1.9em;
+    }
+    #footer {
+        background-color: rgba(255,255,255,.8);
+        color: rgb(0, 0, 0);
+    }
+    li a {
+        padding: 13px 15px;
+    }
+}
+@media screen and (max-width: 350px) {
+    html, body {
+        font-size: 16px;
+        line-height: 1.8em;
+    }
+    #footer {
+        background-color: rgba(255,255,255,.8);
+        color: rgb(0, 0, 0);
+    }
+    li a {
+        padding: 10px 10px;
+    }
+}
