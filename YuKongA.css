@@ -73,6 +73,7 @@ li a {
 }
 
 #footer {
+    padding: 0;
     width: 100%;
     color: rgb(0, 0, 0);
     float: left;
@@ -85,6 +86,7 @@ li a {
 }
 
 #footer:hover {
+    padding: 0;
     background-color: rgba(255,255,255,0.8);
     color: rgb(0, 0, 0);
 }
