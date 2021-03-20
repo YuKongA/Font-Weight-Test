@@ -11,8 +11,7 @@
 <body>
 
 <div class="header">
-    <h1 align="center">字体字重の测试</h1>
-    <p id="hitokoto" align="center" style="font-weight:300;">一言获取中...</p>
+    <h1 align="center" style="margin: 50px 45px 30px 45px">字体字重の测试</h1>
 </div>
 <div class="yyy">
     <div class="ul">
@@ -37,16 +36,4 @@
   <p>Copyrights © 2021 · By YuKongA</p>
 </div>
 </body>
-<script>
-fetch('https://v1.hitokoto.cn')
-.then(response => response.json())
-.then(data => {
-    const hitokoto = document.getElementById('hitokoto')
-    hitokoto.innerText = data.hitokoto + '——' +data.from + ''
-})
-.catch(console.error)
-</script>
-<style type="text/css">
-  a {text-decoration: none}
-</style>
 </html>

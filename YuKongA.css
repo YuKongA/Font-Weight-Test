@@ -101,18 +101,26 @@ hr {
         background-color: rgba(255,255,255,.8);
         color: rgb(0, 0, 0);
     }
+    .ul {
+        margin-right: 35px;
+        margin-left: 35px;
+    }
     .li a {
         padding: 13px 15px;
     }
 }
 @media screen and (max-width: 530px) {
     html, body {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.8em;
     }
     #footer {
         background-color: rgba(255,255,255,.8);
         color: rgb(0, 0, 0);
+    }
+    .ul {
+        margin-right: 25px;
+        margin-left: 25px;
     }
     .li a {
         padding: 10px 10px;
