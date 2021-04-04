@@ -21,15 +21,19 @@ h3 {
 }
 #roboto {
       font-family: "Roboto";
+      padding-left: 35%;
 }
 #sans-serif {
       font-family: sans-serif;
+      padding-left: 35%;
 }
 #serif {
       font-family: serif;
+      padding-left: 35%;
 }
 #monospace {
       font-family: monospace;
+      padding-left: 35%;
 }
 p,
 hr {
@@ -108,6 +112,22 @@ hr {
     .li a {
         padding: 13px 15px;
     }
+    #roboto {
+        font-family: "Roboto";
+        padding-left: 10%;
+  }
+  #sans-serif {
+        font-family: sans-serif;
+        padding-left: 10%;
+  }
+  #serif {
+        font-family: serif;
+        padding-left: 10%;
+  }
+  #monospace {
+        font-family: monospace;
+        padding-left: 10%;
+  }
 }
 @media screen and (max-width: 530px) {
     html, body {
@@ -125,4 +145,20 @@ hr {
     .li a {
         padding: 10px 10px;
     }
+    #roboto {
+        font-family: "Roboto";
+        padding-left: 2%;
+  }
+  #sans-serif {
+        font-family: sans-serif;
+        padding-left: 2%;
+  }
+  #serif {
+        font-family: serif;
+        padding-left: 2%;
+  }
+  #monospace {
+        font-family: monospace;
+        padding-left: 2%;
+  }
 }
