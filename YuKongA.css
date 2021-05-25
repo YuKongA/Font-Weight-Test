@@ -113,8 +113,8 @@ hr {
 }
 @media screen and (max-width: 560px) {
     html, body {
-        font-size: 15.3px;
-        line-height: 1.7em;
+        font-size: 16px;
+        line-height: 1.6em;
     }
     #footer {
         background-color: rgba(255,255,255,.8);
