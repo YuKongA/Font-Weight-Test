@@ -21,19 +21,19 @@ h3 {
 }
 #roboto {
       font-family: "Roboto";
-      padding-left: 35%;
+      padding-left: 5%;
 }
 #sans-serif {
       font-family: sans-serif;
-      padding-left: 35%;
+      padding-left: 5%;
 }
 #serif {
       font-family: serif;
-      padding-left: 35%;
+      padding-left: 5%;
 }
 #monospace {
       font-family: monospace;
-      padding-left: 35%;
+      padding-left: 5%;
 }
 p,
 hr {
@@ -52,8 +52,8 @@ hr {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 .li {
     float: left;
@@ -98,67 +98,44 @@ hr {
 
 @media screen and (max-width: 1200px) {
     html, body {
-        font-size: 18px;
-        line-height:1.9em;
+        font-size: 19px;
+        line-height:1.8em;
     }
     #footer {
         background-color: rgba(255,255,255,.8);
         color: rgb(0, 0, 0);
     }
-    .ul {
-        margin-right: 35px;
-        margin-left: 35px;
-    }
+    
     .li a {
         padding: 13px 15px;
     }
-    #roboto {
-        font-family: "Roboto";
-        padding-left: 10%;
-  }
-  #sans-serif {
-        font-family: sans-serif;
-        padding-left: 10%;
-  }
-  #serif {
-        font-family: serif;
-        padding-left: 10%;
-  }
-  #monospace {
-        font-family: monospace;
-        padding-left: 10%;
-  }
+
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 560px) {
     html, body {
-        font-size: 17px;
-        line-height: 1.8em;
+        font-size: 16px;
+        line-height: 1.7em;
     }
     #footer {
         background-color: rgba(255,255,255,.8);
         color: rgb(0, 0, 0);
     }
-    .ul {
-        margin-right: 25px;
-        margin-left: 25px;
-    }
+
     .li a {
         padding: 10px 10px;
     }
-    #roboto {
-        font-family: "Roboto";
-        padding-left: 2%;
-  }
-  #sans-serif {
-        font-family: sans-serif;
-        padding-left: 2%;
-  }
-  #serif {
-        font-family: serif;
-        padding-left: 2%;
-  }
-  #monospace {
-        font-family: monospace;
-        padding-left: 2%;
-  }
+    @media screen and (max-width: 360px) {
+        html, body {
+            font-size: 14px;
+            line-height: 1.6em;
+        }
+        #footer {
+            background-color: rgba(255,255,255,.8);
+            color: rgb(0, 0, 0);
+        }
+    
+        .li a {
+            padding: 10px 10px;
+        }
+    }
 }
