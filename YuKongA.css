@@ -3,160 +3,202 @@
     white-space: nowrap;
 }
 
-html, body {
-    height: 100%;
-    line-height: 2em;
-    font-size: 1.2em;
-}
-
 h1 {
-    font-size: 1.8em;
-    line-height: 1.4em;
+    font-size: 6.5vw;
+    line-height: 130%;
 }
 
 h2 {
-    font-size: 1.0em;
-    line-height: 0.9em;
-}
-
-h3 {
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 4vw;
+    margin-top: 1.8vw;
 }
 
 #roboto {
     font-family: "Roboto";
     padding-left: 5%;
+    line-height: 150%;
+    font-size: 3.8vw;
 }
 
 #sans-serif {
     font-family: sans-serif;
     padding-left: 5%;
+    line-height: 150%;
+    font-size: 3.8vw;
 }
 
 #serif {
     font-family: serif;
     padding-left: 5%;
+    line-height: 150%;
+    font-size: 3.8vw;
 }
 
 #monospace {
     font-family: monospace;
     padding-left: 5%;
+    line-height: 150%;
+    font-size: 3.8vw;
 }
 
 #yyy {
-    margin: 0 auto;
+    overflow: hidden;
 }
 
-.ul {
+.ul { 
     overflow: hidden;
-    background-color: #333;
     margin-right: 5%;
     margin-left: 5%;
+    line-height: 10vw;
 }
 
 .li {
     float: left;
+    width: 16.66666666666666666666666666667%;
+    box-sizing: border-box;
+    background-clip: content-box;
 }
 
 .li a {
     display: block;
-    color: white;
+    color: #ffffff;
     text-align: center;
-    padding: 15px 23px;
     text-decoration: none;
+    font-size: 3.8vw;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #66CC66;
+}
+
+.active:hover {
+    background-color: #99CCFF;
+}
+
+.nothing {
+    background-color: #585858;
+}
+
+.nothing:hover {
+    background-color: #99CCFF;
+}
+
+.about {
+    background-color: #6699FF;
+}
+
+.about:hover {
+    background-color: #99CCFF;
 }
 
 .links a {
   display: inline-block;
-  color: rgb(88, 88, 88);
+  color: #585858;
   font-size: 1.1rem;
   text-decoration: none;
 }
 
 .links a:hover {
-  color: rgb(0, 130, 255);
+  color: #99CCFF;
+}
+
+.header a {
+    color: #585858;
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: #99CCFF;
 }
 
 #footer {
     width: 100%;
-    color: rgb(88, 88, 88);
+    color: #585858;
     float: left;
     text-align: center;
     position: fixed;
     bottom: 0;
     z-index: 11;
     padding: 0.5em 0;
-    transition: all 0.1s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 #footer:hover {
-    background-color: rgba(255,255,255,0.8);
-    color: rgb(0, 0, 0);
+    background-color: #ffffffcc;
+    color: #000000;
 }
 
-@media screen and (max-width: 1200px) {
-    html, body {
-        line-height: 1.8em;
-        font-size: 1.15em;
+@media screen and (min-width: 720px) {
+    h1 {
+        font-size: 2.93em;
+        line-height: 60px;
     }
-
-    .ul {
+    
+    h2 {
         font-size: 1.05em;
-        line-height:1.65em;
+        margin-top: 0.45em;
     }
-
-    #footer {
-        background-color: rgba(255,255,255,.8);
-        color: rgb(0, 0, 0);
+    
+    #roboto {
+        font-family: "Roboto";
+        padding-left: 5%;
+        line-height: 41px;
+        font-size: 1.7em;
+    }
+    
+    #sans-serif {
+        font-family: sans-serif;
+        padding-left: 5%;
+        line-height: 41px;
+        font-size: 1.7em;
+    }
+    
+    #serif {
+        font-family: serif;
+        padding-left: 5%;
+        line-height: 41px;
+        font-size: 1.7em;
+    }
+    
+    #monospace {
+        font-family: monospace;
+        padding-left: 5%;
+        line-height: 41px;
+        font-size: 1.7em;
+    }
+    
+    #yyy {
+        overflow: hidden;
+    }
+    
+    .ul { 
+        overflow: hidden;
+        margin-right: 5%;
+        margin-left: 5%;
+        line-height: 71.5px;
+    }
+    
+    .li {
+        float: left;
+        width: 16.66666666666666666666666666667%;
+        box-sizing: border-box;
+        background-clip: content-box;
     }
     
     .li a {
-        padding: 14px 16px;
+        display: block;
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.75em;
     }
-}
-
-@media screen and (max-width: 600px) {
-    html, body {
-        line-height: 1.75em;
-        font-size: 1.1em;
-    }
-
-    .ul {
-        font-size: 1em;
-        line-height: 1.6em;
-    }
-
     #footer {
-        background-color: rgba(255,255,255,.8);
-        color: rgb(0, 0, 0);
+        background-color: #ffffffcc;
+        color: #000000;
     }
 
-    .li a {
-        padding: 10px 11px;
-    }
-}
-
-@media screen and (max-width: 490px) {
-    html, body {
-        line-height: 1.7em;
-        font-size: 1em;
-    }
-    .ul {
-        font-size: 0.95em;
-        line-height: 1.55em;
-    }
-
-    #footer {
-        background-color: rgba(255,255,255,.8);
-        color: rgb(0, 0, 0);
-    }
-    
-    .li a {
-        padding: 9px 10px;
+    #footer:hover {
+        background-color: #ffffff;
+        color: #000000;
     }
 }
