@@ -5,7 +5,7 @@
 
 h1 {
     font-size: 6.5vw;
-    line-height: 130%;
+    line-height: 120%;
 }
 
 h2 {
@@ -16,29 +16,33 @@ h2 {
 #roboto {
     font-family: "Roboto";
     padding-left: 5%;
-    line-height: 150%;
-    font-size: 3.8vw;
+    padding-right: 5%;
+    line-height: 152%;
+    font-size: 3.85vw;
 }
 
 #sans-serif {
     font-family: sans-serif;
     padding-left: 5%;
-    line-height: 150%;
-    font-size: 3.8vw;
+    padding-right: 5%;
+    line-height: 152%;
+    font-size: 3.85vw;
 }
 
 #serif {
     font-family: serif;
     padding-left: 5%;
-    line-height: 150%;
-    font-size: 3.8vw;
+    padding-right: 5%;
+    line-height: 152%;
+    font-size: 3.85vw;
 }
 
 #monospace {
     font-family: monospace;
     padding-left: 5%;
-    line-height: 150%;
-    font-size: 3.8vw;
+    padding-right: 5%;
+    line-height: 152%;
+    font-size: 3.85vw;
 }
 
 #yyy {
@@ -49,7 +53,7 @@ h2 {
     overflow: hidden;
     margin-right: 5%;
     margin-left: 5%;
-    line-height: 10vw;
+    line-height: 9.5vw;
 }
 
 .li {
@@ -114,6 +118,7 @@ h2 {
 #footer {
     width: 100%;
     color: #585858;
+    background-color: #FFFFFFCC;
     float: left;
     text-align: center;
     position: fixed;
@@ -124,81 +129,48 @@ h2 {
 }
 
 #footer:hover {
-    background-color: #ffffffcc;
+    background-color: #FFFFFF;
     color: #000000;
 }
 
 @media screen and (min-width: 720px) {
     h1 {
         font-size: 2.93em;
-        line-height: 60px;
+        line-height: 56px;
     }
     
     h2 {
-        font-size: 1.05em;
+        font-size: 1.03em;
         margin-top: 0.45em;
     }
     
     #roboto {
-        font-family: "Roboto";
-        padding-left: 5%;
-        line-height: 41px;
-        font-size: 1.7em;
+        line-height: 42px;
+        font-size: 1.74em;
     }
     
     #sans-serif {
-        font-family: sans-serif;
-        padding-left: 5%;
-        line-height: 41px;
-        font-size: 1.7em;
+        line-height: 42px;
+        font-size: 1.74em;
     }
     
     #serif {
-        font-family: serif;
-        padding-left: 5%;
-        line-height: 41px;
-        font-size: 1.7em;
+        line-height: 42px;
+        font-size: 1.74em;
     }
     
     #monospace {
-        font-family: monospace;
-        padding-left: 5%;
-        line-height: 41px;
-        font-size: 1.7em;
-    }
-    
-    #yyy {
-        overflow: hidden;
-    }
-    
-    .ul { 
-        overflow: hidden;
-        margin-right: 5%;
-        margin-left: 5%;
-        line-height: 71.5px;
-    }
-    
-    .li {
-        float: left;
-        width: 16.66666666666666666666666666667%;
-        box-sizing: border-box;
-        background-clip: content-box;
-    }
-    
-    .li a {
-        display: block;
-        color: #ffffff;
-        text-align: center;
-        text-decoration: none;
-        font-size: 1.75em;
-    }
-    #footer {
-        background-color: #ffffffcc;
-        color: #000000;
+        line-height: 42px;
+        font-size: 1.74em;
     }
 
-    #footer:hover {
-        background-color: #ffffff;
-        color: #000000;
+    
+    .ul { 
+        line-height: 68px;
+    }
+
+    
+    .li a {
+        font-size: 1.75em;
     }
 }
