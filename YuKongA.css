@@ -49,7 +49,7 @@ h2 {
     overflow: hidden;
 }
 
-.ul { 
+.ul {
     overflow: hidden;
     margin-right: 5%;
     margin-left: 5%;
@@ -96,14 +96,14 @@ h2 {
 }
 
 .links a {
-  display: inline-block;
-  color: #585858;
-  font-size: 1.1rem;
-  text-decoration: none;
+    display: inline-block;
+    color: #585858;
+    font-size: 1.1rem;
+    text-decoration: none;
 }
 
 .links a:hover {
-  color: #99CCFF;
+    color: #99CCFF;
 }
 
 .header a {
@@ -138,38 +138,29 @@ h2 {
         font-size: 2.93em;
         line-height: 56px;
     }
-    
     h2 {
         font-size: 1.03em;
         margin-top: 0.45em;
     }
-    
     #roboto {
         line-height: 42px;
         font-size: 1.74em;
     }
-    
     #sans-serif {
         line-height: 42px;
         font-size: 1.74em;
     }
-    
     #serif {
         line-height: 42px;
         font-size: 1.74em;
     }
-    
     #monospace {
         line-height: 42px;
         font-size: 1.74em;
     }
-
-    
-    .ul { 
+    .ul {
         line-height: 68px;
     }
-
-    
     .li a {
         font-size: 1.75em;
     }
