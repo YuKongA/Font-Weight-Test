@@ -58,7 +58,7 @@ h2 {
 
 .li {
     float: left;
-    width: 16.66666666666666666666666666667%;
+    width: 14.285714285714%;
     box-sizing: border-box;
     background-clip: content-box;
 }
@@ -98,7 +98,8 @@ h2 {
 .links a {
     display: inline-block;
     color: #585858;
-    font-size: 1.1rem;
+    font-size: 3.8vw;
+    line-height: 250%;
     text-decoration: none;
 }
 
@@ -163,5 +164,8 @@ h2 {
     }
     .li a {
         font-size: 1.75em;
+    }
+    .links a {
+        font-size: 1.75rem;
     }
 }
