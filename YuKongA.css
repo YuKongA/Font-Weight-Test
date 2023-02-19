@@ -58,7 +58,7 @@ h2 {
 
 .li {
     float: left;
-    width: 14.285714285714%;
+    width: 16.66666666667%;
     box-sizing: border-box;
     background-clip: content-box;
 }
@@ -108,7 +108,7 @@ h2 {
 }
 
 .header a {
-    color: #585858;
+    color: #000000;
     text-decoration: none;
 }
 
