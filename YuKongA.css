@@ -4,9 +4,9 @@
 
 h1 {
     font-size: 10vw;
-    line-height: 250%;
+    margin-top: 0.6cm;
+    margin-bottom: 0.35cm;
     text-align: center;
-    margin-bottom: -4.8%;
 }
 
 h2 {
@@ -59,6 +59,8 @@ a {
     overflow: hidden;
     margin-right: 5%;
     margin-left: 5%;
+    margin-bottom: 0.55cm;
+    border-radius: 0.35cm;
     line-height: 9.5vw;
 }
 
@@ -83,7 +85,7 @@ a {
 }
 
 .active:hover {
-    background-color: #99CCFF;
+    background-color: #77BBFF;
 }
 
 .nothing {
@@ -92,7 +94,7 @@ a {
 }
 
 .nothing:hover {
-    background-color: #99CCFF;
+    background-color: #77BBFF;
 }
 
 .header a {
@@ -102,7 +104,7 @@ a {
 }
 
 .header a:hover {
-    color: #66CC66;
+    color: #77BBFF;
 }
 
 #footer {
@@ -144,8 +146,7 @@ a.footer-msg:active {
 @media screen and (min-width: 720px) {
     h1 {
         font-size: 4.5em;
-        line-height: 180px;
-        margin-bottom: -32px;
+
     }
 
     h2 {
