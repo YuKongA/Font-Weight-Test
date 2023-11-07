@@ -2,6 +2,10 @@
     margin: 0 auto;
 }
 
+html {
+    background-color: #FFFBFE;
+}
+
 h1 {
     font-size: 10vw;
     margin-top: 0.6cm;
@@ -20,34 +24,42 @@ a {
 
 #roboto {
     font-family: "Roboto";
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     line-height: 152%;
-    font-size: 3.85vw;
+    font-size: 3.8vw;
+    margin-bottom: 1%;
+    color: #1C1B1F;
 }
 
 #sans-serif {
     font-family: sans-serif;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     line-height: 152%;
-    font-size: 3.85vw;
+    font-size: 3.3vw;
+    margin-bottom: 1%;
+    color: #1C1B1F;
 }
 
 #serif {
     font-family: serif;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     line-height: 152%;
-    font-size: 3.85vw;
+    font-size: 3.3vw;
+    margin-bottom: 1%;
+    color: #1C1B1F;
 }
 
 #monospace {
     font-family: monospace;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     line-height: 152%;
-    font-size: 3.85vw;
+    font-size: 3.3vw;
+    margin-bottom: 1%;
+    color: #1C1B1F;
 }
 
 #yyy {
@@ -59,9 +71,10 @@ a {
     overflow: hidden;
     margin-right: 5%;
     margin-left: 5%;
-    margin-bottom: 0.55cm;
-    border-radius: 0.35cm;
+    margin-bottom: 0.5cm;
+    border-radius: 0.25cm;
     line-height: 9.5vw;
+    border: 1px solid #79747E;
 }
 
 .li {
@@ -69,32 +82,32 @@ a {
     width: 16.66666666667%;
     box-sizing: border-box;
     background-clip: content-box;
+    border-right: 1px solid #79747E;
 }
 
 .li a {
     display: block;
-    color: #FFF;
+    color: #000;
     text-align: center;
     text-decoration: none;
     font-size: 3.8vw;
 }
 
 .active {
-    background-color: #66CC66;
+    background-color: #EADDFF;
     transition: background-color 0.3s;
 }
 
 .active:hover {
-    background-color: #77BBFF;
+    background-color: #6750A4;
 }
 
 .nothing {
-    background-color: #585858;
     transition: background-color 0.3s;
 }
 
 .nothing:hover {
-    background-color: #77BBFF;
+    background-color: #6750A4;
 }
 
 .header a {
@@ -104,7 +117,7 @@ a {
 }
 
 .header a:hover {
-    color: #77BBFF;
+    color: #6750A4;
 }
 
 #footer {
@@ -143,10 +156,17 @@ a.footer-msg:active {
     color: #FFCC7A;
 }
 
+.round {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 0.5cm;
+    border-radius: 0.25cm;
+    border: 1px solid #79747E;
+}
+
 @media screen and (min-width: 720px) {
     h1 {
         font-size: 4.5em;
-
     }
 
     h2 {
@@ -155,21 +175,29 @@ a.footer-msg:active {
     }
 
     #roboto {
+        padding-left: 0.5cm;
+        padding-right: 0.5cm;
         line-height: 42px;
         font-size: 1.74em;
     }
 
     #sans-serif {
+        padding-left: 0.5cm;
+        padding-right: 0.5cm;
         line-height: 42px;
         font-size: 1.74em;
     }
 
     #serif {
+        padding-left: 0.5cm;
+        padding-right: 0.5cm;
         line-height: 42px;
         font-size: 1.74em;
     }
 
     #monospace {
+        padding-left: 0.5cm;
+        padding-right: 0.5cm;
         line-height: 42px;
         font-size: 1.74em;
     }
