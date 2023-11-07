@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh">
-
-<head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link rel="shortcut icon" url="../favicon.ico">
-    <link href="../css/YuKongA.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet"
-        href="https://cdn-font.hyperos.mi.com/font/css?family=MiSans_VF:VF:Chinese_Simplify,Latin&display=swap">
-    <title>字体字重测试</title>
-</head>
-
-<body>
-    <div class="header">
-        <h1><a href="../index.html">字体字重测试</a></h1>
-    </div>
-    <div class="yyy">
-        <div class="ul">
-            <div class="li"><a class="nothing" href="../index.html">首&nbsp&nbsp页</a></div>
-            <div class="li"><a class="nothing" href="index2.html">无衬线</a></div>
-            <div class="li"><a class="nothing" href="index3.html">衬&nbsp&nbsp线</a></div>
-            <div class="li"><a class="active" href="index4.html">等&nbsp&nbsp宽</a></div>
-            <div class="li"><a class="nothing" href="index5.html">日&nbsp&nbsp韩</a></div>
-            <div class="li" style="border-right: 0px;"><a class="nothing" href="index6.html">编&nbsp&nbsp码</a></div>
-        </div>
-    </div>
+<template>
     <div class="round">
         <div id="monospace">
             <h2 style="font-weight: 600;">正常字体：</h2>
@@ -144,9 +117,4 @@
             </p>
         </div>
     </div><br><br>
-    <div id="footer">
-        <p>Copyrights © 2023 - YuKongA</p>
-    </div>
-</body>
-
-</html>
+</template>
