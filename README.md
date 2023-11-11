@@ -2,7 +2,7 @@
 
 网址: https://font.yukonga.top/
 
-本仓库使用 [Vue](https://github.com/vuejs/core) 创建
+本仓库使用 [Vue](https://vuejs.org/) + [Vite](https://vitejs.dev/) 创建
 
 ```
 2023.11.07
