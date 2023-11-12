@@ -106,13 +106,13 @@ a {
   background-color: #a38fd8;
 }
 
-.header a {
+.wrapper a {
   color: #000;
   font-family: "MiSans VF";
   transition: color 0.3s;
 }
 
-.header a:hover {
+.wrapper a:hover {
   color: #6750A4;
 }
 
