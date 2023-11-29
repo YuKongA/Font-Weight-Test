@@ -1,16 +1,12 @@
+@import "color.css";
+
 * {
   margin: 0 auto;
 }
 
-html {
-  background-color: #FFFBFE;
-}
-
-h1 {
-  font-size: 10vw;
-  margin-top: 0.6cm;
-  margin-bottom: 0.35cm;
-  text-align: center;
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 h2 {
@@ -30,7 +26,6 @@ a {
   line-height: 152%;
   font-size: 3.8vw;
   margin-bottom: 1%;
-  color: #1C1B1F;
 }
 
 #sans-serif {
@@ -40,7 +35,6 @@ a {
   line-height: 152%;
   font-size: 3.3vw;
   margin-bottom: 1%;
-  color: #1C1B1F;
 }
 
 #serif {
@@ -50,7 +44,6 @@ a {
   line-height: 152%;
   font-size: 3.3vw;
   margin-bottom: 1%;
-  color: #1C1B1F;
 }
 
 #monospace {
@@ -60,12 +53,20 @@ a {
   line-height: 152%;
   font-size: 3.3vw;
   margin-bottom: 1%;
-  color: #1C1B1F;
 }
 
 #yyy {
   overflow: hidden;
+}
+
+.wrapper {
+  color: var(--color-text);
   font-family: "MiSans VF";
+  font-weight: 550;
+  text-align: center;
+  font-size: 10vw;
+  margin-top: 0.6cm;
+  margin-bottom: 0.35cm;
 }
 
 .ul {
@@ -88,7 +89,7 @@ a {
 
 .li a {
   display: block;
-  color: #000;
+  color: var(--color-text);
   text-align: center;
   text-decoration: none;
   font-size: 3.8vw;
@@ -99,21 +100,11 @@ a {
 }
 
 .nothing.active {
-  background-color: #d5bbff;
+  background-color: var(--color-active);
 }
 
 .nothing:hover {
-  background-color: #a38fd8;
-}
-
-.wrapper a {
-  color: #000;
-  font-family: "MiSans VF";
-  transition: color 0.3s;
-}
-
-.wrapper a:hover {
-  color: #6750A4;
+  background-color: var(--color-hover);
 }
 
 #footer {
@@ -161,10 +152,6 @@ a.footer-msg:active {
 }
 
 @media screen and (min-width: 720px) {
-  h1 {
-    font-size: 4.5em;
-  }
-
   h2 {
     font-size: 1.03em;
   }
@@ -195,6 +182,10 @@ a.footer-msg:active {
     padding-right: 0.5cm;
     line-height: 42px;
     font-size: 1.74em;
+  }
+
+  .wrapper {
+    font-size: 4.5em;
   }
 
   .ul {

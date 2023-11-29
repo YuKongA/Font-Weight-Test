@@ -1,6 +1,6 @@
 <template>
-    <div class="round">
-        <div id="roboto">
+    <nav class="round">
+        <nav id="roboto">
             <h2 style="font-weight: 600;">日文：</h2>
             <p>
                 <span style="font-weight:100;" lang="ja"> 100 - これは例です <i>これは例です</i></span><br>
@@ -15,10 +15,10 @@
                 <span style="font-weight:900;" lang="ja"> 900 - これは例です <i>これは例です</i></span><br>
                 <span style="font-weight:950;" lang="ja"> 950 - これは例です <i>これは例です</i></span><br>
             </p>
-        </div>
-    </div>
-    <div class="round">
-        <div id="roboto">
+        </nav>
+    </nav>
+    <nav class="round">
+        <nav id="roboto">
             <h2 style="font-weight: 600;">韩文：</h2>
             <p>
                 <span style="font-weight:100;" lang="kr"> 100 - 이것은 例입니다 <i>이것은 例입니다</i></span><br>
@@ -33,6 +33,6 @@
                 <span style="font-weight:900;" lang="kr"> 900 - 이것은 例입니다 <i>이것은 例입니다</i></span><br>
                 <span style="font-weight:950;" lang="kr"> 950 - 이것은 例입니다 <i>이것은 例입니다</i></span><br>
             </p>
-        </div>
-    </div><br><br>
+        </nav>
+    </nav><br><br>
 </template>

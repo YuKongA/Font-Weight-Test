@@ -4,11 +4,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <div class="wrapper">
-      <h1><RouterLink to="/">字体字重测试</RouterLink></h1>
-    </div>
-    <div class="yyy">
-      <div class="ul">
+    <nav class="wrapper">字体字重测试</nav>
+    <nav class="yyy">
+      <nav class="ul">
         <nav class="li">
           <RouterLink class="nothing" active-class="active" to="/">首&nbsp&nbsp页</RouterLink>
         </nav>
@@ -27,8 +25,8 @@ import { RouterLink, RouterView } from 'vue-router'
         <nav class="li" style="border-right: 0px;">
           <RouterLink class="nothing" active-class="active" to="/character-set">编&nbsp&nbsp码</RouterLink>
         </nav>
-      </div>
-    </div>
+      </nav>
+    </nav>
   </header>
 
   <RouterView />

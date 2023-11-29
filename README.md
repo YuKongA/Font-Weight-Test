@@ -5,6 +5,9 @@
 本仓库使用 [Vue](https://vuejs.org/) + [Vite](https://vitejs.dev/) 创建
 
 ```
+2023.11.29
+- 添加深色模式支持
+
 2023.11.07
 - 切换到类 Material Design 3 样式
 - 切换到 Vue 框架 SPA 单页 Web 应用

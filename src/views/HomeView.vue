@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div class="round">
-      <div id="roboto">
+    <nav class="round">
+      <nav id="roboto">
         <h2 style="font-weight: 600;">常用字重映射对照: </h2>
         <p>
           <span style="font-weight:100;">100 - 淡体 Thin /Hairline</span><br>
@@ -16,10 +16,10 @@
           <span style="font-weight:900;">900 - 浓体 Black / Heavy</span><br>
           <span style="font-weight:950;">950 - 特浓 Extra-Black / Ultra-Black</span><br>
         </p>
-      </div>
-    </div>
-    <div class="round">
-      <div id="roboto">
+      </nav>
+    </nav>
+    <nav class="round">
+      <nav id="roboto">
         <h2 style="font-weight: 600;">字重对照展示: </h2>
         <h5 style="font-weight: 500;">设备字体: </h5>
         <p>
@@ -97,7 +97,7 @@
           <span style="font-weight:900;">6</span>
           <span style="font-weight:950;">6</span>
         </p>
-      </div>
-    </div><br><br>
+      </nav>
+    </nav><br><br>
   </main>
 </template>

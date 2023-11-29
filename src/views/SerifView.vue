@@ -1,6 +1,6 @@
 <template>
-    <div class="round">
-        <div id="serif">
+    <nav class="round">
+        <nav id="serif">
             <h2 style="font-weight: 600;">正常字体：</h2>
             <p>
                 <span style="font-weight:100;"> 100 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
@@ -15,10 +15,10 @@
                 <span style="font-weight:900;"> 900 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
                 <span style="font-weight:950;"> 950 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
             </p>
-        </div>
-    </div>
-    <div class="round">
-        <div id="serif">
+        </nav>
+    </nav>
+    <nav class="round">
+        <nav id="serif">
             <h2 style="font-weight: 600;">倾斜字体：</h2>
             <p>
                 <span style="font-weight:100;">100 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
@@ -33,10 +33,10 @@
                 <span style="font-weight:900;">900 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
                 <span style="font-weight:950;">950 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
             </p>
-        </div>
-    </div>
-    <div class="round">
-        <div id="serif">
+        </nav>
+    </nav>
+    <nav class="round">
+        <nav id="serif">
             <h2 style="font-weight: 600;">更多示例：</h2>
             <p align="center" style="font-weight:100;"> -100- <br> 不以物喜，不以己悲。 ——范仲淹《岳阳楼记》<br> ABCDEFGHIJKLMNOPQRSTUVWXYZ
                 <br> abcdefghijklmnopqrstuvwxyz<br> 0123456789.
@@ -115,6 +115,6 @@
                     ABCDEFGHIJKLMNOPQRSTUVWXYZ<br> abcdefghijklmnopqrstuvwxyz<br>
                     0123456789.</i>
             </p>
-        </div>
-    </div><br><br>
+        </nav>
+    </nav><br><br>
 </template>

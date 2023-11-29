@@ -1,0 +1,33 @@
+:root {
+    --vt-c-white: rgb(255, 250, 254);
+    --vt-c-black: rgb(30, 30, 30);
+
+    --vt-c-text-light-1: var(--vt-c-black);
+    --vt-c-text-light-2: rgb(27, 26, 30);
+
+    --vt-c-text-dark-1: var(--vt-c-white);
+    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+
+    --vt-c-active-color-1: rgb(214, 189, 255);
+    --vt-c-active-color-2: rgb(86, 67, 105);
+
+    --vt-c-hover-color-1: rgb(163, 143, 217);
+    --vt-c-hover-color-2: rgb(110, 83, 137);
+}
+
+/* semantic color variables for this project */
+:root {
+    --color-background: var(--vt-c-white);
+    --color-text: var(--vt-c-text-light-1);
+    --color-active: var(--vt-c-active-color-1);
+    --color-hover: var(--vt-c-hover-color-1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: var(--vt-c-black);
+        --color-text: var(--vt-c-text-dark-2);
+        --color-active: var(--vt-c-active-color-2);
+        --color-hover: var(--vt-c-hover-color-2);
+    }
+}
