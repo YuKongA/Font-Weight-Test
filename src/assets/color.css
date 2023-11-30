@@ -6,7 +6,7 @@
     --vt-c-text-light-2: rgb(27, 26, 30);
 
     --vt-c-text-dark-1: var(--vt-c-white);
-    --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+    --vt-c-text-dark-2: rgb(200, 200, 200);
 
     --vt-c-active-color-1: rgb(214, 189, 255);
     --vt-c-active-color-2: rgb(86, 67, 105);
