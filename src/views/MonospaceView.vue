@@ -6,7 +6,6 @@
                 <span style="font-weight:100;"> 100 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
                 <span style="font-weight:200;"> 200 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
                 <span style="font-weight:300;"> 300 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
-                <span style="font-weight:350;"> 350 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
                 <span style="font-weight:400;"> 400 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
                 <span style="font-weight:500;"> 500 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
                 <span style="font-weight:600;"> 600 - 这是一个示例 ABCDEFG abcdefg 012345</span><br>
@@ -24,7 +23,6 @@
                 <span style="font-weight:100;">100 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
                 <span style="font-weight:200;">200 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
                 <span style="font-weight:300;">300 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
-                <span style="font-weight:350;">350 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
                 <span style="font-weight:400;">400 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
                 <span style="font-weight:500;">500 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
                 <span style="font-weight:600;">600 - <i>这是一个示例 ABCDEFG abcdefg 012345</i></span><br>
@@ -53,13 +51,6 @@
                     0123456789.</i>
             </p><br>
             <p align="center" style="font-weight:300;"> -300- <br> 不以物喜，不以己悲。 ——范仲淹《岳阳楼记》<br> ABCDEFGHIJKLMNOPQRSTUVWXYZ
-                <br> abcdefghijklmnopqrstuvwxyz<br> 0123456789.
-                <br>
-                <i>不以物喜，不以己悲。 ——范仲淹《岳阳楼记》<br>
-                    ABCDEFGHIJKLMNOPQRSTUVWXYZ<br> abcdefghijklmnopqrstuvwxyz<br>
-                    0123456789.</i>
-            </p><br>
-            <p align="center" style="font-weight:350;"> -350- <br> 不以物喜，不以己悲。 ——范仲淹《岳阳楼记》<br> ABCDEFGHIJKLMNOPQRSTUVWXYZ
                 <br> abcdefghijklmnopqrstuvwxyz<br> 0123456789.
                 <br>
                 <i>不以物喜，不以己悲。 ——范仲淹《岳阳楼记》<br>
