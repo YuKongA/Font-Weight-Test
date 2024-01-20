@@ -16,7 +16,7 @@
             "permanent": false
         },
         {
-            "source": "/ja-kr",
+            "source": "/ja-ko",
             "destination": "/",
             "permanent": false
         },

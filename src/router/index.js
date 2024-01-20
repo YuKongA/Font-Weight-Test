@@ -25,9 +25,9 @@ const router = createRouter({
       component: () => import('../views/MonospaceView.vue')
     },
     {
-      path: '/ja-kr',
+      path: '/ja-ko',
       name: '日韩',
-      component: () => import('../views/JaKrView.vue')
+      component: () => import('../views/JaKoView.vue')
     },
     {
       path: '/character-set',

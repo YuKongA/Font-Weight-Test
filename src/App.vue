@@ -20,7 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink class="nothing" active-class="active" to="/monospace">等&nbsp&nbsp宽</RouterLink>
         </nav>
         <nav class="li">
-          <RouterLink class="nothing" active-class="active" to="/ja-kr">日&nbsp&nbsp韩</RouterLink>
+          <RouterLink class="nothing" active-class="active" to="/ja-ko">日&nbsp&nbsp韩</RouterLink>
         </nav>
         <nav class="li" style="border-right: 0px;">
           <RouterLink class="nothing" active-class="active" to="/character-set">编&nbsp&nbsp码</RouterLink>
