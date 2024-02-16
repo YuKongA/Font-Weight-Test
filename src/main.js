@@ -8,4 +8,6 @@ const app = createApp(App)
 
 app.use(router)
 
+router.push('/')
+
 app.mount('#app')
