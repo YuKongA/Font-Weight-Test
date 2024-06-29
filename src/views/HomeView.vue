@@ -2,11 +2,12 @@
   <main>
     <nav class="round">
       <nav id="sans-serif">
-        <h2 style="font-weight: 600;">常用字重映射对照: </h2>
+        <h2 style="font-weight: 600;">常用字重映射: </h2>
         <p>
           <span style="font-weight:100;">100 - 淡体 Thin (Hairline)</span><br>
           <span style="font-weight:200;">200 - 特细 Extra Light (Ultra Light)</span><br>
           <span style="font-weight:300;">300 - 细体 Light</span><br>
+          <span style="font-weight:350;">350 - 次细 Demi-Light</span><br>
           <span style="font-weight:400;">400 - 标准 Normal (Regular)</span><br>
           <span style="font-weight:500;">500 - 适中 Medium</span><br>
           <span style="font-weight:600;">600 - 次粗 Semi Bold (Demi Bold)</span><br>
