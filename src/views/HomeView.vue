@@ -1,7 +1,7 @@
 <template>
   <main>
     <nav class="round">
-      <nav id="roboto">
+      <nav id="sans-serif">
         <h2 style="font-weight: 600;">常用字重映射对照: </h2>
         <p>
           <span style="font-weight:100;">100 - 淡体 Thin (Hairline)</span><br>
@@ -18,79 +18,23 @@
       </nav>
     </nav>
     <nav class="round">
-      <nav id="roboto">
+      <nav id="sans-serif">
         <h2 style="font-weight: 600;">字重对照展示: </h2>
         <h5 style="font-weight: 500;">设备字体: </h5>
-        <p>
-          <span style="font-weight:100;">永</span>
-          <span style="font-weight:200;">永</span>
-          <span style="font-weight:300;">永</span>
-          <span style="font-weight:400;">永</span>
-          <span style="font-weight:500;">永</span>
-          <span style="font-weight:600;">永</span>
-          <span style="font-weight:700;">永</span>
-          <span style="font-weight:800;">永</span>
-          <span style="font-weight:900;">永</span>
-          <span style="font-weight:950;">永</span>
-          <br>
-          <span style="font-weight:100;">A</span>
-          <span style="font-weight:200;">A</span>
-          <span style="font-weight:300;">A</span>
-          <span style="font-weight:400;">A</span>
-          <span style="font-weight:500;">A</span>
-          <span style="font-weight:600;">A</span>
-          <span style="font-weight:700;">A</span>
-          <span style="font-weight:800;">A</span>
-          <span style="font-weight:900;">A</span>
-          <span style="font-weight:950;">A</span>
-          <br>
-          <span style="font-weight:100;">6</span>
-          <span style="font-weight:200;">6</span>
-          <span style="font-weight:300;">6</span>
-          <span style="font-weight:400;">6</span>
-          <span style="font-weight:500;">6</span>
-          <span style="font-weight:600;">6</span>
-          <span style="font-weight:700;">6</span>
-          <span style="font-weight:800;">6</span>
-          <span style="font-weight:900;">6</span>
-          <span style="font-weight:950;">6</span>
-        </p>
-        <h5 style="font-weight:500; font-family: MiSans; margin-top: 0.2cm;">MiSans: </h5>
-        <p style="font-family: MiSans VF;">
-          <span style="font-weight:100;">永</span>
-          <span style="font-weight:200;">永</span>
-          <span style="font-weight:300;">永</span>
-          <span style="font-weight:400;">永</span>
-          <span style="font-weight:500;">永</span>
-          <span style="font-weight:600;">永</span>
-          <span style="font-weight:700;">永</span>
-          <span style="font-weight:800;">永</span>
-          <span style="font-weight:900;">永</span>
-          <span style="font-weight:950;">永</span>
-          <br>
-          <span style="font-weight:100;">A</span>
-          <span style="font-weight:200;">A</span>
-          <span style="font-weight:300;">A</span>
-          <span style="font-weight:400;">A</span>
-          <span style="font-weight:500;">A</span>
-          <span style="font-weight:600;">A</span>
-          <span style="font-weight:700;">A</span>
-          <span style="font-weight:800;">A</span>
-          <span style="font-weight:900;">A</span>
-          <span style="font-weight:950;">A</span>
-          <br>
-          <span style="font-weight:100;">6</span>
-          <span style="font-weight:200;">6</span>
-          <span style="font-weight:300;">6</span>
-          <span style="font-weight:400;">6</span>
-          <span style="font-weight:500;">6</span>
-          <span style="font-weight:600;">6</span>
-          <span style="font-weight:700;">6</span>
-          <span style="font-weight:800;">6</span>
-          <span style="font-weight:900;">6</span>
-          <span style="font-weight:950;">6</span>
-        </p>
+        <ComparisonDisplay fontFamily="sans-serif" language="en" :characters="['永', 'A', '6']" />
+        <h5 style="font-weight:500; font-family: MiSans VF; margin-top: 0.1rem;">MiSans VF: </h5>
+        <ComparisonDisplay fontFamily="MiSans VF" language="en" :characters="['永', 'A', '6']" />
       </nav>
     </nav><br><br>
   </main>
 </template>
+
+<script>
+import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
+
+export default {
+  components: {
+    ComparisonDisplay
+  }
+}
+</script>

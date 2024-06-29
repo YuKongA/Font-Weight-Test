@@ -1,6 +1,6 @@
 <template>
     <nav class="round">
-        <nav id="roboto">
+        <nav id="sans-serif">
             <h2 style="font-weight: 600;">GB2312(节选):</h2>
             <nav style="white-space: normal">℃ ＄ ¤ ￠ ￡ ‰ § № ★ ⒛ ⑴ ＊ ＋ ， － ． ／ ０ お く ぐ け げ こト ド ナ ニ ヌ ネ ノ ハ バ パ ︵ ︶ ︹ ︺
                 ︿ ﹀
@@ -10,7 +10,7 @@
         </nav>
     </nav>
     <nav class="round">
-        <nav id="roboto">
+        <nav id="sans-serif">
             <h2 style="font-weight: 600;">GBK(节选):</h2>
             <nav style="white-space: normal">〇 〡 〢 〣 〤 〥 〦 〧 〨 〩 ㊣ ㎎ ㎏ ㎜ ㎝ ㎞ ㎡ ﹗ ﹞ ﹟ ﹠ ﹡ ˙ ― ℅ ℉ ↙∕ ∟ ∣ ╬ ╭ ╯ ╱ ╲ ╳ ▁ ▂
                 ▃ ▄▕
@@ -20,7 +20,7 @@
         </nav>
     </nav>
     <nav class="round">
-        <nav id="roboto">
+        <nav id="sans-serif">
             <h2 style="font-weight: 600;">GB18030-2000(节选):</h2>
             <nav style="white-space: normal">Ä Æ Å À Á Â Ã Ç È É Ê Ë Ð Ì Í Î Ï Ö Ø Ò Ó Ô Õ Ñ Ù Ú Û Ü Ý Þ ä æ å â ã ç ë ð
                 î ï
@@ -29,7 +29,7 @@
         </nav>
     </nav>
     <nav class="round">
-        <nav id="roboto">
+        <nav id="sans-serif">
             <h2 style="font-weight: 600;">附. CJK(节选):</h2>
             <nav style="white-space: normal">
                 <span style="color:rgb(255,0,0)">扩展 A 区: </span>㑇 㑊 㕮 㘎 㙍 㙘 㙦 㛃 㛚 㛹 㟃 㠇 㠓 㤘 㥄 㧐 㧑 㧟 㫰 㬊<br>
