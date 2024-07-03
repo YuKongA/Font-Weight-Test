@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p :style="{ fontFamily: fontFamily }" :lang="language">
+        <p :style="{ fontFamily: fontFamily }">
             <template v-for="(char, index) in characters" :key="index">
                 <span v-for="weight in weights" :key="`${index}-${weight}`" :style="{ fontWeight: weight }">
                     <span v-if="weightShow">{{ weight }} - </span>
@@ -17,7 +17,6 @@
 export default {
     props: {
         fontFamily: String,
-        language: String,
         weightShow: Boolean,
         characters: Array
     },
