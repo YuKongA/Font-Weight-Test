@@ -5,16 +5,16 @@
         <h2 style="font-weight: 600;">常用字重映射: </h2>
         <p>
           <span style="font-weight:100;">100 - 淡体 Thin (Hairline)</span><br>
-          <span style="font-weight:200;">200 - 特细 Extra Light (Ultra Light)</span><br>
+          <span style="font-weight:200;">200 - 特细 ExtraLight (UltraLight)</span><br>
           <span style="font-weight:300;">300 - 细体 Light</span><br>
-          <span style="font-weight:350;">350 - 次细 Demi-Light</span><br>
+          <span style="font-weight:350;">350 - 次细 DemiLight</span><br>
           <span style="font-weight:400;">400 - 标准 Normal (Regular)</span><br>
           <span style="font-weight:500;">500 - 适中 Medium</span><br>
-          <span style="font-weight:600;">600 - 次粗 Semi Bold (Demi Bold)</span><br>
+          <span style="font-weight:600;">600 - 次粗 SemiBold (DemiBold)</span><br>
           <span style="font-weight:700;">700 - 粗体 Bold</span><br>
-          <span style="font-weight:800;">800 - 特粗 Extra Bold (Ultra Bold)</span><br>
+          <span style="font-weight:800;">800 - 特粗 ExtraBold (UltraBold)</span><br>
           <span style="font-weight:900;">900 - 浓体 Black (Heavy)</span><br>
-          <span style="font-weight:950;">950 - 特浓 Extra Black (Ultra Black)</span><br>
+          <span style="font-weight:950;">950 - 特浓 ExtraBlack (UltraBlack)</span><br>
         </p>
       </nav>
     </nav>
