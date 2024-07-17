@@ -13,6 +13,18 @@
 
     --vt-c-hover-color-1: rgb(163, 143, 217);
     --vt-c-hover-color-2: rgb(110, 83, 137);
+
+    --vt-c-footer-background-1: rgba(214, 189, 255, 0.2);
+    --vt-c-footer-background-2: rgba(86, 67, 105, 0.2);
+
+    --vt-c-footer-text-1: rgb(44, 34, 53);
+    --vt-c-footer-text-2: rgb(236, 226, 252);
+
+    --vt-c-footer-hover-1: rgba(86, 67, 105, 0.8);
+    --vt-c-footer-hover-2: rgba(214, 189, 255, 0.8);
+
+    --vt-c-footer-link-hover-1: rgb(100, 255, 0);
+    --vt-c-footer-link-hover-2: rgb(0, 100, 255);
 }
 
 /* semantic color variables for this project */
@@ -21,6 +33,10 @@
     --color-text: var(--vt-c-text-light-1);
     --color-active: var(--vt-c-active-color-1);
     --color-hover: var(--vt-c-hover-color-1);
+    --color-footer-background: var(--vt-c-footer-background-1);
+    --color-footer-text: var(--vt-c-footer-text-1);
+    --color-footer-hover: var(--vt-c-footer-hover-1);
+    --color-footer-link-hover: var(--vt-c-footer-link-hover-1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,5 +45,9 @@
         --color-text: var(--vt-c-text-dark-2);
         --color-active: var(--vt-c-active-color-2);
         --color-hover: var(--vt-c-hover-color-2);
+        --color-footer-background: var(--vt-c-footer-background-2);
+        --color-footer-text: var(--vt-c-footer-text-2);
+        --color-footer-hover: var(--vt-c-footer-hover-2);
+        --color-footer-link-hover: var(--vt-c-footer-link-hover-2);
     }
 }

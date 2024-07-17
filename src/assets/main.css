@@ -101,38 +101,48 @@ a {
 
 #footer {
   position: fixed;
-  bottom: 8px;
+  bottom: 10px;
   left: calc(50vw - 130px);
   right: calc(50vw - 130px);
-  background-color: rgb(0, 0, 0, 0.15);
-  color: #FFF;
+  background-color: var(--color-footer-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-footer-text);
   padding: 5px;
-  transition: all 0.5s ease-out;
   border-radius: 10px;
-  transition: background-color 0.5s;
   font-family: "MiSans VF";
   text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #footer:hover {
-  background-color: rgb(0, 0, 0, 0.75);
+  color: var(--color-background);
+  background-color: var(--color-footer-hover);
 }
 
 a.footer-msg {
-  color: #FFF;
+  color: var(--color-footer-text);
   transition: color 0.3s;
 }
 
 a.footer-msg:visited {
-  color: #FFF;
-}
-
-a.footer-msg:hover {
-  color: #66CC66;
+  color: var(--color-footer-text);
 }
 
 a.footer-msg:active {
   color: #FFCC7A;
+}
+
+#footer a.footer-msg {
+  transition: color 0.5s ease;
+}
+
+#footer:hover a.footer-msg {
+  color: var(--color-background);
+}
+
+#footer:hover a.footer-msg:hover {
+  color: var(--color-footer-link-hover);
 }
 
 @media screen and (min-width: 720px) {
