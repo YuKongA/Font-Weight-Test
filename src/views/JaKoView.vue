@@ -10,7 +10,7 @@
         <nav id="sans-serif">
             <h2 style="font-weight: 600;">韩文：</h2>
             <ComparisonDisplay fontFamily="sans-serif" :weightShow=true
-                :characters="['이것은 例입니다 <i>이것은 例입니다</i>']" />
+                :characters="['이것은例입니다 <i>이것은例입니다</i>']" />
         </nav>
     </nav><br><br>
 </template>
