@@ -34,11 +34,11 @@
                         <td lang="ko">处</td>
                     </tr>
                     <tr>
+                        <td lang="">述</td>
                         <td lang="zh-Hans">述</td>
                         <td lang="zh-Hant">述</td>
                         <td lang="ja">述</td>
                         <td lang="ko">述</td>
-                        <td lang="">复</td>
                     </tr>
                     <tr>
                         <td lang="">直</td>
