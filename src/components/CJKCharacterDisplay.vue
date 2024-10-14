@@ -48,13 +48,6 @@
                         <td lang="ko">直</td>
                     </tr>
                     <tr>
-                        <td lang="">迷</td>
-                        <td lang="zh-Hans">迷</td>
-                        <td lang="zh-Hant">迷</td>
-                        <td lang="ja">迷</td>
-                        <td lang="ko">迷</td>
-                    </tr>
-                    <tr>
                         <td lang="">言</td>
                         <td lang="zh-Hans">言</td>
                         <td lang="zh-Hant">言</td>
