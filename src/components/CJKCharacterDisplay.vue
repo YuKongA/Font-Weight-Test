@@ -4,7 +4,7 @@
             <table class="character-table">
                 <thead>
                     <tr>
-                        <th>未指定</th>
+                        <th>默认</th>
                         <th>简中</th>
                         <th>繁中</th>
                         <th>日文</th>
