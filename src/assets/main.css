@@ -102,6 +102,7 @@ a {
 input[type="text"] {
   color: var(--color-text);
   width: 100%;
+  font-size: large;
   padding: 8px;
   margin-bottom: 5px;
   box-sizing: border-box;
@@ -139,16 +140,28 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .character-display {
-  display: flex;
-  justify-content: space-around;
+  padding-bottom: 8px;
 }
 
-.character-display div {
+.character-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.character-table th,
+.character-table td {
+  border: 1px solid var(--color-text);
+
   text-align: center;
 }
 
-.character-display p {
-  font-size: 1.3rem;
+.character-table th {
+  background-color: var(--color-footer-background);
+  padding: 8px;
+}
+
+.character-table td {
+  padding: 6px;
 }
 
 #footer {
