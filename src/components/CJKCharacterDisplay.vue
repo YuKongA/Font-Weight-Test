@@ -13,11 +13,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td lang="">复</td>
-                        <td lang="zh-Hans">复</td>
-                        <td lang="zh-Hant">复</td>
-                        <td lang="ja">复</td>
-                        <td lang="ko">复</td>
+                        <td lang="">处</td>
+                        <td lang="zh-Hans">处</td>
+                        <td lang="zh-Hant">处</td>
+                        <td lang="ja">处</td>
+                        <td lang="ko">处</td>
                     </tr>
                     <tr>
                         <td lang="">门</td>
@@ -27,11 +27,11 @@
                         <td lang="ko">门</td>
                     </tr>
                     <tr>
-                        <td lang="">处</td>
-                        <td lang="zh-Hans">处</td>
-                        <td lang="zh-Hant">处</td>
-                        <td lang="ja">处</td>
-                        <td lang="ko">处</td>
+                        <td lang="">复</td>
+                        <td lang="zh-Hans">复</td>
+                        <td lang="zh-Hant">复</td>
+                        <td lang="ja">复</td>
+                        <td lang="ko">复</td>
                     </tr>
                     <tr>
                         <td lang="">述</td>

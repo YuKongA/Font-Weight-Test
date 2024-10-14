@@ -32,18 +32,22 @@
         <nav id="sans-serif">
             <h2 style="font-weight: 600;">附. CJK(节选):</h2>
             <nav style="white-space: normal">
-                <span style="color:rgb(255,0,0)">扩展 A 区: </span>㑇 㑊 㕮 㘎 㙍 㙘 㙦 㛃 㛚 㛹 㟃 㠇 㠓 㤘 㥄 㧐 㧑 㧟 㫰 㬊<br>
-                <span style="color:rgb(255,0,0)">扩展 B 区: </span>𠅤 𠙶 𠳐 𡎚 𡐓 𣗋 𣲗 𣲘 𣸣 𤧛 𤩽 𤫉 𥔲 𥕢 𥖨 𥻗 𦈡 𦒍 𦙶
-                𦝼<br>
-                <span style="color:rgb(255,0,0)">扩展 C 区: </span>𪟝 𪣻 𪤗 𪨰 𪨶 𪩘 𪾢 𫄧 𫄨 𫄷 𫄸 𫇭 𫌀 𫍣 𫍯 𫍲 𫍽 𫐄 𫐐
-                𫐓<br>
-                <span style="color:rgb(255,0,0)">扩展 D 区: </span>𫞩 𫟅 𫟦 𫟹 𫟼 𫠆 𫠊 𫠜 𫝀 𫝁 𫝃 𫝄 𫝅 𫝆 𫝇 𫝈 𫝉 𫝊 𫞕
-                𫞫<br>
-                <span style="color:rgb(255,0,0)">扩展 E 区: </span>𫢸 𫫇 𫭟 𫭢 𫭼 𫮃 𫰛 𫵷 𫶇 𫷷 𫸩 𬀩 𬀪 𬂩 𬃊 𬇕 𬇙 𬇹 𬉼
-                𬊈<br>
+                <span style="color:rgb(255,0,0)">扩展 A 区: </span>㑇 㑊 㘎 㙍 㙘 㛃 㛹 㠇 㠓 㧐 㧑 㬊<br>
+                <span style="color:rgb(255,0,0)">扩展 B 区: </span>𠅤 𠙶 𡎚 𡐓 𣗋 𣲗 𣸣 𤩽 𤫉 𥖨 𦈡 𦒍<br>
+                <span style="color:rgb(255,0,0)">2005 新增: </span>龦 龩 龪 龭 龰 龱 龴 龵 龷 龸 龺 龻<br>
+                <span style="color:rgb(255,0,0)">扩展 C 区: </span>𪟝 𪣻 𪨰 𪨶 𪩘 𫄧 𫇭 𫌀 𫍣 𫍲 𫍽 𫐐<br>
+                <span style="color:rgb(255,0,0)">扩展 D 区: </span>𫞩 𫟅 𫟦 𫟹 𫟼 𫝀 𫝁 𫝃 𫝄 𫝅 𫝆 𫝇<br>
+                <span style="color:rgb(255,0,0)">扩展 E 区: </span>𫢸 𫫇 𫭟 𫭢 𫭼 𫮃 𫰛 𫵷 𫶇 𫷷 𫸩 𬀩<br>
                 <span style="color:rgb(255,0,0)">急用汉字: </span>鿍 鿎 鿏 䲤 鿑 鿒 鿓 鿔 鿕<br>
-                <span style="color:rgb(255,0,0)">扩展 F 区: </span>𮀔 𮧵 𬺰 𬺱 𬺲 𬺳 𬺴 𬺵 𬺶 𬺷 𬺸 𬺹<br>
-                <span style="color:rgb(255,0,0)">扩展 G 区: </span>𰻝 𰻞 𱁬 𰜩 𰀴 𰅐 𰆀 𰈀 𰊐 𰊠 𰍠 𰔀
+                <span style="color:rgb(255,0,0)">扩展 F 区: </span>𮧵 𮀔 𬺰 𬺱 𬺲 𬺳 𬺴 𬺵 𬺶 𬺷 𬺸 𬺹<br>
+                <span style="color:rgb(255,0,0)">2017 新增: </span>鿥 鿦 鿧 鿨 鿩 鿪 鿖 鿗 鿙 鿚 鿜 鿠<br>
+                <span style="color:rgb(255,0,0)">2018 新增: </span>鿫 鿬 鿭 鿮 鿯<br>
+                <span style="color:rgb(255,0,0)">扩展 G 区: </span>𰻝 𰻞 𱁬 𰜩 𰀴 𰅐 𰆀 𰈀 𰊐 𰊠 𰍠 𰔀<br>
+                <span style="color:rgb(255,0,0)">急用科学与技术用字: </span>鿰 鿱 鿲 鿳 鿴 鿵 鿶 鿷 鿸 鿹 鿺 鿻 鿼<br>
+                <span style="color:rgb(255,0,0)">需分离的汉字: </span>䶶 䶷 䶸 䶹 䶺 䶻 䶼 䶽 䶾 䶿<br>
+                <span style="color:rgb(255,0,0)">昆曲工尺谱用字: </span>𪛗 𪛘 𪛙 𪛚 𪛛 𪛜 𪛝<br>
+                <span style="color:rgb(255,0,0)">扩展 H 区: </span>𱍐 𱍧 𱎺 𱏫 𱐝 𱚋 𱣋 𱩁 𱰜 𱹫 𲁩 𲎯<br>
+                <span style="color:rgb(255,0,0)">扩展 I 区: </span>𮯰 𮱅 𮱸 𮲫 𮳞 𮴆 𮴼	𮵮 𮶖 𮷊 𮸌 𮹝<br>
             </nav>
         </nav>
     </nav><br><br>

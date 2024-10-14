@@ -107,7 +107,7 @@ input[type="text"] {
   margin-bottom: 5px;
   box-sizing: border-box;
   border: 1px solid #79747E;
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: var(--color-background);
 }
 
@@ -140,28 +140,51 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .character-display {
-  padding-bottom: 8px;
+  padding-bottom: 5px;
 }
 
 .character-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #79747E;
+  border-radius: 6px;
 }
 
 .character-table th,
 .character-table td {
-  border: 1px solid var(--color-text);
-
+  border: 1px solid #79747E;
   text-align: center;
-}
-
-.character-table th {
-  background-color: var(--color-footer-background);
-  padding: 8px;
-}
-
-.character-table td {
   padding: 6px;
+}
+
+.character-table th:first-child,
+.character-table td:first-child {
+  border-left: none;
+}
+
+.character-table th:last-child,
+.character-table td:last-child {
+  border-right: none;
+}
+
+.character-table tr:first-child th {
+  border-top: none;
+}
+
+.character-table tr:last-child td,
+.character-table tr:first-child th {
+  border-bottom: none;
+}
+
+.character-table th+th,
+.character-table td+td {
+  border-left: none;
+}
+
+.character-table tr+tr td,
+.character-table tr+tr th {
+  border-top: none;
 }
 
 #footer {
