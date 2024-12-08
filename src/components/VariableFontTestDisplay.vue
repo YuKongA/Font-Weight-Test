@@ -3,34 +3,20 @@
         <div class="controls">
             <div class="slider-group">
                 <label>字重: {{ fontWeight }}</label>
-                <input 
-                    type="range" 
-                    v-model="fontWeight" 
-                    v-bind="weightRangeProps"
-                    @input="updateRangeStyle($event, 'weightRange')" 
-                    ref="weightRange"
-                    class="custom-range">
+                <input type="range" v-model="fontWeight" v-bind="weightRangeProps"
+                    @input="updateRangeStyle($event, 'weightRange')" ref="weightRange" class="custom-range">
             </div>
 
             <div class="slider-group">
                 <label>字号: {{ fontSize }}</label>
-                <input 
-                    type="range" 
-                    v-model="fontSize" 
-                    v-bind="sizeRangeProps"
-                    @input="updateRangeStyle($event, 'sizeRange')" 
-                    ref="sizeRange"
-                    class="custom-range">
+                <input type="range" v-model="fontSize" v-bind="sizeRangeProps"
+                    @input="updateRangeStyle($event, 'sizeRange')" ref="sizeRange" class="custom-range">
             </div>
 
             <div class="text-input-group">
                 <label>文本: </label>
                 <div class="input-wrapper">
-                    <input 
-                        type="text" 
-                        v-model="testText"
-                        class="custom-text-input"
-                        placeholder="输入测试文本...">
+                    <input type="text" v-model="testText" class="custom-text-input" placeholder="输入测试文本...">
                 </div>
             </div>
         </div>
