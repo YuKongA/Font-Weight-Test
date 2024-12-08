@@ -1,7 +1,7 @@
 <template>
   <main>
+    <h2 style="font-weight: 600;">常用字重映射</h2>
     <nav class="round">
-      <h2 style="font-weight: 600;">常用字重映射: </h2>
       <p id="sans-serif">
         <span style="font-weight:100;">100 - 淡体 Thin (Hairline)</span><br>
         <span style="font-weight:200;">200 - 特细 ExtraLight (UltraLight)</span><br>
@@ -16,22 +16,24 @@
         <span style="font-weight:950;">950 - 特浓 ExtraBlack (UltraBlack)</span><br>
       </p>
     </nav>
+
+    <h2 style="font-weight: 600;">字重对照展示</h2>
     <nav class="round">
-      <h2 style="font-weight: 600;">字重对照展示: </h2>
-      <h5 style="font-weight: 500;">设备字体: </h5>
+      <p style="font-weight: 500;">设备字体:</p>
       <ComparisonDisplay fontFamily="sans-serif" language="en" :characters="['永', 'A', '6']" />
-      <h5 style="font-weight:500; font-family: MiSans VF; margin-top: 0.1rem;">MiSans VF: </h5>
+      <p style="font-weight: 500; font-family: MiSans VF;">MiSans VF:</p>
       <ComparisonDisplay fontFamily="MiSans VF" language="en" :characters="['永', 'A', '6']" />
     </nav>
+
+    <h2 style="font-weight: 600;">可变字体测试</h2>
     <nav class="round">
-      <h2 style="font-weight: 600;">可变字体测试: </h2>
       <VariableFontTestDisplay />
     </nav>
+
+    <h2 style="font-weight: 600;">同字字形测试</h2>
     <nav class="round">
-      <h2 style="font-weight: 600;">同字字形测试: </h2>
       <CJKCharacterDisplay />
     </nav>
-    <br><br>
   </main>
 </template>
 

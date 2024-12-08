@@ -1,144 +1,280 @@
 @import "color.css";
 
-* {
-  margin: 0 auto;
+/* CSS 变量定义 */
+:root {
+  /* 基础尺寸 */
+  --base-font: clamp(14px, 1.8vw, 16px);
+  --heading-font: clamp(18px, 2.2vw, 24px);
+  --wrapper-font: clamp(28px, 3.5vw, 32px);
+  --nav-font: clamp(16px, 1.9vw, 20px);
+
+  /* 布局尺寸 */
+  --content-width: 90%;
+  --card-padding: 0.4cm;
+  --side-margin: 5%;
+  --border-radius: 0.3cm;
+  --border-color: #79747E;
+
+  /* 动画 */
+  --transition-normal: all 0.3s ease;
+
+  /* 添加标题间距变量 */
+  --title-margin-top: 0.4cm;
+  --title-margin-bottom: 0.2cm;
+  --wrapper-margin: 0.8cm auto 0.6cm;
+
+  /* 添加页脚相关变量 */
+  --footer-height: 30px;
+  --footer-bottom-margin: 10px;
+  --content-bottom-margin: calc(var(--footer-height) + var(--footer-bottom-margin) + 20px);
 }
 
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 基础样式 */
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-}
-
-h2 {
-  font-size: 4vw;
-  margin-top: 0.28cm;
-  margin-bottom: 0.05cm;
+  font-family: "MiSans VF", sans-serif;
+  line-height: 1.45;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
+/* 标题样式 */
+h2,
+h5 {
+  color: var(--color-text);
+  transition: var(--transition-normal);
+}
+
+h2 {
+  font-size: var(--heading-font);
+  margin: var(--title-margin-top) var(--side-margin) var(--title-margin-bottom);
+  font-weight: 550;
+  width: var(--content-width);
+}
+
+h5 {
+  margin: 0.3cm 0 0.2cm;
+}
+
+/* 卡片基础样式 */
 .round {
-  margin-right: 5%;
-  margin-left: 5%;
+  width: var(--content-width);
+  margin: 0 var(--side-margin);
+  padding: var(--card-padding);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  font-size: var(--base-font);
+  transition: var(--transition-normal);
+}
+
+/* 为非最后一个 .round 添加底部边距 */
+.round:not(:last-child) {
   margin-bottom: 0.5cm;
-  border-radius: 0.25cm;
-  border: 1px solid #79747E;
-  padding-left: 2.6%;
-  padding-right: 2.6%;
-  padding-bottom: 1.3%;
-  line-height: 152%;
-  font-size: 3.8vw;
+}
+
+/* 在 "MiSans VF:" 上方添加下方间距 */
+.round> :nth-child(2) {
+  margin-bottom: 0.15cm;
+}
+
+/* 移除特定的 last-child 样式，改为使用主内容容器 */
+#app {
+  min-height: 100vh;
+  padding-bottom: var(--content-bottom-margin);
+  box-sizing: border-box;
+}
+
+/* 字体族设置 */
+#sans-serif,
+#serif,
+#monospace {
+  font-size: var(--base-font);
+  line-height: 1.6;
+  transition: var(--transition-normal);
 }
 
 #sans-serif {
   font-family: sans-serif;
-  font-size: 3.3vw;
 }
 
 #serif {
   font-family: serif;
-  font-size: 3.3vw;
 }
 
 #monospace {
   font-family: monospace;
-  font-size: 3.3vw;
 }
 
-.wrapper {
-  color: var(--color-text);
-  font-family: "MiSans VF";
-  font-weight: 550;
-  text-align: center;
-  font-size: 10vw;
-  margin-top: 0.6cm;
-  margin-bottom: 0.35cm;
-}
-
-.yyy {
-  overflow: hidden;
-}
-
+/* 导航样式 */
 .ul {
-  overflow: hidden;
-  margin-right: 5%;
-  margin-left: 5%;
+  width: var(--content-width);
+  margin-left: var(--side-margin);
+  margin-right: var(--side-margin);
   margin-bottom: 0.5cm;
+  padding: 0;
   border-radius: 0.25cm;
-  line-height: 9.5vw;
-  border: 1px solid #79747E;
+  border: 1px solid var(--border-color);
+  line-height: 2.8;
+  overflow: hidden;
+  transition: var(--transition-normal);
 }
 
 .li {
   float: left;
   width: 16.66666666667%;
-  box-sizing: border-box;
-  background-clip: content-box;
-  border-right: 1px solid #79747E;
+  border-right: 1px solid var(--border-color);
+  transition: var(--transition-normal);
+}
+
+.li:last-child {
+  border-right: none;
 }
 
 .li a {
   display: block;
-  color: var(--color-text);
   text-align: center;
-  text-decoration: none;
-  font-size: 3.8vw;
+  font-size: var(--nav-font);
+  padding: 0.2em 0;
 }
 
+/* 交互状态 */
 .nothing {
-  transition: background-color 0.3s;
-}
-
-.nothing.active {
-  background-color: var(--color-active);
+  position: relative;
+  transition: var(--transition-normal);
+  background-color: transparent;
 }
 
 .nothing:hover {
   background-color: var(--color-hover);
 }
 
+.nothing:active {
+  background-color: var(--color-active);
+}
+
+.nothing.active {
+  background-color: var(--color-active);
+  font-weight: 500;
+}
+
+/* 表单元素 */
 input[type="text"] {
-  color: var(--color-text);
   width: 100%;
+  color: var(--color-text);
   font-size: large;
   padding: 8px;
   margin-bottom: 5px;
-  box-sizing: border-box;
-  border: 1px solid #79747E;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   background-color: var(--color-background);
 }
 
+/* 范围滑块样式 */
 input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
   height: 5px;
   border-radius: 15px;
-  outline: none;
-  opacity: 1;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: var(--color-footer-text);
-  cursor: pointer;
-}
-
+input[type="range"]::-webkit-slider-thumb,
 input[type="range"]::-moz-range-thumb {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: var(--color-footer-text);
   cursor: pointer;
+  -webkit-appearance: none;
 }
 
+/* 页脚样式 */
+#footer {
+  position: fixed;
+  bottom: var(--footer-bottom-margin);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  height: var(--footer-height);
+  background-color: var(--color-footer-background);
+  backdrop-filter: blur(10px);
+  color: var(--color-footer-text);
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+#footer:hover {
+  color: var(--color-background);
+  background-color: var(--color-footer-hover);
+}
+
+/* 响应式布局 */
+@media screen and (min-width: 768px) {
+  :root {
+    --content-width: min(80%, 800px);
+    --side-margin: auto;
+  }
+
+  .round {
+    line-height: 1.5;
+  }
+
+  .ul {
+    line-height: 3;
+    margin: 0 auto 0.5cm;
+    /* 居中对齐 */
+  }
+
+  h2 {
+    margin: var(--title-margin-top) auto var(--title-margin-bottom);
+    text-align: left;
+    /* 保持文本左对齐 */
+  }
+
+  .wrapper {
+    margin: 1cm auto 0.8cm;
+    /* 在桌面端增加间距 */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --content-width: min(70%, 900px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --content-width: min(60%, 1000px);
+  }
+}
+
+/* 添加包装器样式 */
+.wrapper {
+  color: var(--color-text);
+  font-family: "MiSans VF";
+  font-weight: 600;
+  text-align: center;
+  font-size: var(--wrapper-font);
+  margin: var(--wrapper-margin);
+  transition: var(--transition-normal);
+  width: var(--content-width);
+}
+
+/* 添加字符表格样式 */
 .character-display {
   padding-bottom: 5px;
 }
@@ -147,15 +283,15 @@ input[type="range"]::-moz-range-thumb {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid #79747E;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
 }
 
 .character-table th,
 .character-table td {
-  border: 1px solid #79747E;
+  border: 1px solid var(--border-color);
   text-align: center;
-  padding: 6px;
+  padding: 4px 6px;
 }
 
 .character-table th:first-child,
@@ -172,8 +308,7 @@ input[type="range"]::-moz-range-thumb {
   border-top: none;
 }
 
-.character-table tr:last-child td,
-.character-table tr:first-child th {
+.character-table tr:last-child td {
   border-bottom: none;
 }
 
@@ -182,32 +317,11 @@ input[type="range"]::-moz-range-thumb {
   border-left: none;
 }
 
-.character-table tr+tr td,
-.character-table tr+tr th {
+.character-table tr+tr td {
   border-top: none;
 }
 
-#footer {
-  position: fixed;
-  bottom: 10px;
-  left: calc(50vw - 130px);
-  right: calc(50vw - 130px);
-  background-color: var(--color-footer-background);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: var(--color-footer-text);
-  padding: 5px;
-  border-radius: 10px;
-  font-family: "MiSans VF";
-  text-align: center;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-#footer:hover {
-  color: var(--color-background);
-  background-color: var(--color-footer-hover);
-}
-
+/* 添加页脚链接样式 */
 a.footer-msg {
   color: var(--color-footer-text);
   transition: color 0.3s;
@@ -231,46 +345,4 @@ a.footer-msg:active {
 
 #footer:hover a.footer-msg:hover {
   color: var(--color-footer-link-hover);
-}
-
-@media screen and (min-width: 710px) {
-  h2 {
-    font-size: 1.05em;
-  }
-
-  .round {
-    padding-left: 0.5cm;
-    padding-right: 0.5cm;
-    padding-bottom: 0.25cm;
-    line-height: 42px;
-    font-size: 1.7em;
-  }
-
-  #sans-serif {
-    font-size: 1em;
-  }
-
-  #serif {
-    font-size: 1em;
-  }
-
-  #monospace {
-    font-size: 1.23em;
-  }
-
-  .wrapper {
-    font-size: 4.5em;
-  }
-
-  .ul {
-    line-height: 68px;
-  }
-
-  .li a {
-    font-size: 1.73em;
-  }
-
-  .links a {
-    font-size: 1.73rem;
-  }
 }

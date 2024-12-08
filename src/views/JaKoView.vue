@@ -1,16 +1,19 @@
 <template>
+  <main>
+    <h2 style="font-weight: 600;">日文字体</h2>
     <nav class="round">
-        <nav id="sans-serif">
-            <h2 style="font-weight: 600;">日文：</h2>
-            <ComparisonDisplay fontFamily="sans-serif" :weightShow=true :characters="['これは例です <i>これは例です</i>']" />
-        </nav>
+      <nav id="sans-serif">
+        <ComparisonDisplay fontFamily="sans-serif" :weightShow=true :characters="['これは例です <i>これは例です</i>']" />
+      </nav>
     </nav>
+
+    <h2 style="font-weight: 600;">韩文字体</h2>
     <nav class="round">
-        <nav id="sans-serif">
-            <h2 style="font-weight: 600;">韩文：</h2>
-            <ComparisonDisplay fontFamily="sans-serif" :weightShow=true :characters="['이것은例입니다 <i>이것은例입니다</i>']" />
-        </nav>
-    </nav><br><br>
+      <nav id="sans-serif">
+        <ComparisonDisplay fontFamily="sans-serif" :weightShow=true :characters="['이것은例입니다 <i>이것은例입니다</i>']" />
+      </nav>
+    </nav>
+  </main>
 </template>
 
 <script>
