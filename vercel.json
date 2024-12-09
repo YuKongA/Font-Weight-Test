@@ -2,27 +2,27 @@
     "redirects": [
         {
             "source": "/sans-serif",
-            "destination": "/",
+            "destination": "./",
             "permanent": false
         },
         {
             "source": "/serif",
-            "destination": "/",
+            "destination": "./",
             "permanent": false
         },
         {
             "source": "/monospace",
-            "destination": "/",
+            "destination": "./",
             "permanent": false
         },
         {
             "source": "/ja-ko",
-            "destination": "/",
+            "destination": "./",
             "permanent": false
         },
         {
             "source": "/character-set",
-            "destination": "/",
+            "destination": "./",
             "permanent": false
         }
     ]

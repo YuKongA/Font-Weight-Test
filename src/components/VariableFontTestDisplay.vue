@@ -104,28 +104,45 @@ export default {
     margin: 0;
     cursor: pointer;
     background: var(--color-footer-background);
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    user-select: none;
+    box-shadow: none;
 }
 
 .custom-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 0;
-    height: 0;
+    width: 20px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
 }
 
 .custom-range::-moz-range-thumb {
-    width: 0;
-    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 30px;
+    background: transparent;
     border: none;
+    cursor: pointer;
+    box-shadow: none;
 }
 
 .custom-range::-moz-range-track {
-    height: 36px;
+    height: 30px;
     border-radius: 999px;
     background: var(--color-footer-background);
 }
 
 .custom-text-input {
+    -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 36px;
     padding: 0 16px;
@@ -144,5 +161,3 @@ export default {
     line-height: 1.5;
 }
 </style>
-
-</```rewritten_file>

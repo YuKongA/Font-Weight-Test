@@ -41,13 +41,24 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: "MiSans VF", sans-serif;
   line-height: 1.45;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+#sans-serif {
+  font-family: sans-serif;
+}
+
+#serif {
+  font-family: serif;
+}
+
+#monospace {
+  font-family: monospace;
 }
 
 /* 布局容器
@@ -95,6 +106,10 @@ h5 {
 
 .round> :nth-child(2) {
   margin-bottom: 0.15cm;
+}
+
+.no-padding {
+  padding: 0 !important;
 }
 
 /* 导航样式
@@ -199,26 +214,37 @@ input[type="range"]::-moz-range-thumb {
 
 /* 字符表格
 ----------------------------------------*/
-.character-display {
-  padding-bottom: 5px;
-}
-
 .character-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  overflow: hidden;
+  border-collapse: collapse;
 }
 
 .character-table th,
 .character-table td {
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
   text-align: center;
-  padding: 4px 6px;
-  position: relative;
-  border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.character-table th {
+  font-weight: 600;
+  background-color: transparent;
+}
+
+/* 移除最外层边框 */
+.character-table tr:first-child th {
+  border-top: none;
+}
+
+.character-table tr:last-child td {
+  border-bottom: none;
+}
+
+.character-table th:first-child,
+.character-table td:first-child {
+  border-left: none;
 }
 
 .character-table th:last-child,
@@ -226,14 +252,11 @@ input[type="range"]::-moz-range-thumb {
   border-right: none;
 }
 
-.character-table tr:last-child td {
-  border-bottom: none;
-}
-
 /* 页脚
 ----------------------------------------*/
 #footer {
   position: fixed;
+  font-family: "MiSans VF";
   bottom: var(--footer-bottom-margin);
   left: 50%;
   transform: translateX(-50%);

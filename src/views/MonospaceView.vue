@@ -4,7 +4,7 @@
     <nav class="round">
       <nav id="monospace">
         <ComparisonDisplay fontFamily="monospace" language="en" :weightShow=true
-            :characters="['这是一个示例 ABCDEFG abcdefg 012345']" />
+          :characters="['这是一个示例 ABCDEFG abcdefg 012345']" />
       </nav>
     </nav>
 
@@ -12,13 +12,15 @@
     <nav class="round">
       <nav id="monospace">
         <ComparisonDisplay fontFamily="monospace" language="en" :weightShow=true
-            :characters="['<i>这是一个示例 ABCDEFG abcdefg 012345</i>']" />
+          :characters="['<i>这是一个示例 ABCDEFG abcdefg 012345</i>']" />
       </nav>
     </nav>
 
     <h2 style="font-weight: 600;">更多示例</h2>
     <nav class="round">
-      <MoreDisplay />
+      <nav id="monospace">
+        <MoreDisplay />
+      </nav>
     </nav>
   </main>
 </template>
@@ -28,9 +30,9 @@ import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
 import MoreDisplay from '../components/FontMoreDisplay.vue';
 
 export default {
-    components: {
-        ComparisonDisplay,
-        MoreDisplay
-    }
+  components: {
+    ComparisonDisplay,
+    MoreDisplay
+  }
 }
 </script>
