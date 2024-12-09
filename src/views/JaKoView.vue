@@ -20,8 +20,8 @@
 import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
 
 export default {
-    components: {
-        ComparisonDisplay
-    }
+  components: {
+    ComparisonDisplay
+  }
 }
 </script>
