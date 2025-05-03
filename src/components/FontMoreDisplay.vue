@@ -5,7 +5,7 @@
             'last-weight': index === weights.length - 1
         }">
             <span class="weight-label">-{{ weight }}-</span>
-            <span v-html="sampleText"></span>
+            <span v-html="sampleText"></span><br>
             <span v-html="sampleTextItalic"></span>
         </p>
     </div>
