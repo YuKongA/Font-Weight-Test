@@ -40,13 +40,18 @@ const DEFAULT_FONT_WEIGHT = 400;
 const DEFAULT_FONT_SIZE = 32;
 const DEFAULT_TEXT = '永 A 6';
 const LANGUAGE_OPTIONS = [
-    { value: 'zh-CN', label: '简体中文 (中国大陆)' },
-    { value: 'zh-HK', label: '繁體中文 (香港)' },
-    { value: 'zh-TW', label: '繁體中文 (台灣)' },
-    { value: 'zh-Hans', label: '简体中文 (Hans)' },
-    { value: 'zh-Hant', label: '繁體中文 (Hant)' },
-    { value: 'ja', label: '日本語' },
-    { value: 'ko', label: '한국어' }
+    { value: 'zh-Hans', label: '简体中文 (zh-Hans)' },
+    { value: 'zh-CN', label: '中国大陆 (zh-CN)' },
+    { value: 'zh-SG', label: '新加坡 (zh-SG)' },
+    { value: 'zh-MY', label: '马来西亚 (zh-MY)' },
+    { value: 'zh-Hant', label: '繁体中文 (zh-Hant)' },
+    { value: 'zh-TW', label: '中国台湾 (zh-TW)' },
+    { value: 'zh-HK', label: '中国香港 (zh-HK)' },
+    { value: 'zh-MO', label: '中国澳门 (zh-MO)' },
+    { value: 'ja', label: '日本 (ja)' },
+    { value: 'ko', label: '朝鲜 (ko)' },
+    { value: 'ko-KR', label: '韩国 (ko-KR)' },
+    { value: 'vi', label: '越南 (vi)' },
 ];
 
 export default {
@@ -55,7 +60,7 @@ export default {
             fontWeight: DEFAULT_FONT_WEIGHT,
             fontSize: DEFAULT_FONT_SIZE,
             testText: DEFAULT_TEXT,
-            selectedLang: 'zh-CN',
+            selectedLang: 'zh-Hans',
             languageOptions: LANGUAGE_OPTIONS
         };
     },
