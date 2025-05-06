@@ -1,32 +1,37 @@
 <template>
     <nav id="sans-serif">
-        <div class="controls">
-            <div class="slider-group">
-                <label>字重: {{ fontWeight }}</label>
-                <input type="range" v-model="fontWeight" v-bind="weightRangeProps"
-                    @input="updateRangeStyle($event, 'weightRange')" ref="weightRange" class="custom-range">
-            </div>
+        <nav class="slider-group">
+            <label>字重: {{ fontWeight }}</label>
+            <input type="range" v-model="fontWeight" v-bind="weightRangeProps" @input="updateRangeStyle('weightRange')"
+                ref="weightRange" class="custom-range">
+        </nav>
 
-            <div class="slider-group">
-                <label>字号: {{ fontSize }}</label>
-                <input type="range" v-model="fontSize" v-bind="sizeRangeProps"
-                    @input="updateRangeStyle($event, 'sizeRange')" ref="sizeRange" class="custom-range">
-            </div>
+        <nav class="slider-group">
+            <label>字号: {{ fontSize }}</label>
+            <input type="range" v-model="fontSize" v-bind="sizeRangeProps" @input="updateRangeStyle('sizeRange')"
+                ref="sizeRange" class="custom-range">
+        </nav>
 
-            <div class="text-input-group">
-                <label>文本: </label>
-                <div class="input-wrapper">
-                    <input type="text" v-model="testText" class="custom-text-input" placeholder="输入测试文本...">
-                </div>
-            </div>
-        </div>
+        <nav class="select-group">
+            <label>字型:</label>
+            <select v-model="selectedLang" class="custom-text-input">
+                <option v-for="lang in languageOptions" :key="lang.value" :value="lang.value">
+                    {{ lang.label }}
+                </option>
+            </select>
+        </nav>
 
-        <div class="preview-section">
+        <nav class="text-input-group">
+            <label>文本: </label>
+            <input type="text" v-model="testText" class="custom-text-input" placeholder="输入测试文本...">
+        </nav>
+
+        <nav class="preview-section">
             <label>示例:</label>
-            <div class="preview-text">
-                <p :style="previewStyle">{{ testText }}</p>
-            </div>
-        </div>
+            <nav class="preview-text">
+                <p :style="previewStyle" :lang="selectedLang">{{ testText }}</p>
+            </nav>
+        </nav>
     </nav>
 </template>
 
@@ -34,13 +39,24 @@
 const DEFAULT_FONT_WEIGHT = 400;
 const DEFAULT_FONT_SIZE = 32;
 const DEFAULT_TEXT = '永 A 6';
+const LANGUAGE_OPTIONS = [
+    { value: 'zh-CN', label: '简体中文 (中国大陆)' },
+    { value: 'zh-HK', label: '繁體中文 (香港)' },
+    { value: 'zh-TW', label: '繁體中文 (台灣)' },
+    { value: 'zh-Hans', label: '简体中文 (Hans)' },
+    { value: 'zh-Hant', label: '繁體中文 (Hant)' },
+    { value: 'ja', label: '日本語' },
+    { value: 'ko', label: '한국어' }
+];
 
 export default {
     data() {
         return {
             fontWeight: DEFAULT_FONT_WEIGHT,
             fontSize: DEFAULT_FONT_SIZE,
-            testText: DEFAULT_TEXT
+            testText: DEFAULT_TEXT,
+            selectedLang: 'zh-CN',
+            languageOptions: LANGUAGE_OPTIONS
         };
     },
 
@@ -72,7 +88,7 @@ export default {
     },
 
     methods: {
-        updateRangeStyle(event, refName) {
+        updateRangeStyle(refName) {
             const range = this.$refs[refName];
             const value = (range.value - range.min) / (range.max - range.min) * 100;
             range.style.background = `linear-gradient(
@@ -86,7 +102,7 @@ export default {
     mounted() {
         this.$nextTick(() => {
             ['weightRange', 'sizeRange'].forEach(refName => {
-                this.updateRangeStyle(null, refName);
+                this.updateRangeStyle(refName);
             });
         });
     }
@@ -97,12 +113,15 @@ export default {
 .custom-range {
     -webkit-appearance: none;
     appearance: none;
+    display: block;
     width: 100%;
     height: 30px;
     outline: none;
     padding: 0;
     margin: 0;
+    border: none;
     cursor: pointer;
+    box-shadow: none;
     background: var(--color-footer-background);
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
@@ -135,14 +154,20 @@ export default {
 }
 
 .custom-range::-moz-range-track {
+    -webkit-appearance: none;
+    appearance: none;
     height: 30px;
     border-radius: 999px;
     background: var(--color-footer-background);
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
 }
 
 .custom-text-input {
     -webkit-appearance: none;
     appearance: none;
+    display: block;
     width: 100%;
     height: 36px;
     padding: 0 16px;
@@ -153,11 +178,25 @@ export default {
     font-size: 0.9rem;
     text-align: left;
     transition: all 0.2s ease;
+    margin-bottom: 0;
 }
 
 .preview-text p {
     margin: 0;
     padding: 0;
     line-height: 1.5;
+}
+
+.slider-group,
+.select-group,
+.text-input-group {
+    margin-bottom: 0.6rem;
+}
+
+.slider-group>label,
+.select-group>label,
+.text-input-group>label,
+.preview-section>label {
+    display: block;
 }
 </style>

@@ -25,27 +25,28 @@
       <ComparisonDisplay fontFamily="MiSans VF" language="en" :characters="['永', 'A', '6']" />
     </nav>
 
-    <h2 style="font-weight: 600;">可变字体测试</h2>
-    <nav class="round">
-      <VariableFontTestDisplay />
-    </nav>
+    <h2 style="font-weight: 600;">典型同字字形</h2>
 
-    <h2 style="font-weight: 600;">同字字形测试</h2>
     <nav class="round">
       <CJKCharacterDisplay />
+    </nav>
+
+    <h2 style="font-weight: 600;">详细字体测试</h2>
+    <nav class="round">
+      <CustomFontTestDisplay />
     </nav>
   </main>
 </template>
 
 <script>
 import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
-import VariableFontTestDisplay from '../components/VariableFontTestDisplay.vue';
+import CustomFontTestDisplay from '../components/CustomFontTestDisplay.vue';
 import CJKCharacterDisplay from '../components/CJKCharacterDisplay.vue';
 
 export default {
   components: {
     ComparisonDisplay,
-    VariableFontTestDisplay,
+    CustomFontTestDisplay,
     CJKCharacterDisplay
   }
 }
