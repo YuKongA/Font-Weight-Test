@@ -15,12 +15,12 @@
                 <td lang="zh-Hans">{{ character }}</td>
                 <td lang="zh-Hant">{{ character }}</td>
                 <td lang="ja">{{ character }}</td>
-                <td lang="ko">{{ character }}</td>
+                <td lang="ko-kr">{{ character }}</td>
             </tr>
         </tbody>
     </table>
 </template>
 
 <script setup>
-const characters = ['处', '门', '复', '述', '直', '言']
+const characters = ['扇', '靠', '复', '述', '直', '言']
 </script>
