@@ -186,6 +186,11 @@ export default {
     margin-bottom: 0;
 }
 
+.custom-text-input option {
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
 .preview-text p {
     margin: 0;
     padding: 0;
