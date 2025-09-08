@@ -32,26 +32,30 @@
       </nav>
     </nav>
 
-    <h2 style="font-weight: 600;">附. CJK(节选)</h2>
+    <h2 style="font-weight: 600;">附. CJK (节选)</h2>
     <nav class="round">
       <nav id="sans-serif">
         <nav style="white-space: normal">
-          <span style="color:rgb(255,0,0)">扩展 A 区: </span>㑇 㑊 㘎 㙍 㙘 㛃 㛹 㠇 㠓 㧐 㧑 㬊<br>
-          <span style="color:rgb(255,0,0)">扩展 B 区: </span>𠅤 𠙶 𡎚 𡐓 𣗋 𣲗 𣸣 𤩽 𤫉 𥖨 𦈡 𦒍<br>
-          <span style="color:rgb(255,0,0)">2005 新增: </span>龦 龩 龪 龭 龰 龱 龴 龵 龷 龸 龺 龻<br>
-          <span style="color:rgb(255,0,0)">扩展 C 区: </span>𪟝 𪣻 𪨰 𪨶 𪩘 𫄧 𫇭 𫌀 𫍣 𫍲 𫍽 𫐐<br>
-          <span style="color:rgb(255,0,0)">扩展 D 区: </span>𫞩 𫟅 𫟦 𫟹 𫟼 𫝀 𫝁 𫝃 𫝄 𫝅 𫝆 𫝇<br>
-          <span style="color:rgb(255,0,0)">扩展 E 区: </span>𫢸 𫫇 𫭟 𫭢 𫭼 𫮃 𫰛 𫵷 𫶇 𫷷 𫸩 𬀩<br>
-          <span style="color:rgb(255,0,0)">急用汉字: </span>鿍 鿎 鿏 䲤 鿑 鿒 鿓 鿔 鿕<br>
-          <span style="color:rgb(255,0,0)">扩展 F 区: </span>𮧵 𮀔 𬺰 𬺱 𬺲 𬺳 𬺴 𬺵 𬺶 𬺷 𬺸 𬺹<br>
+          <span style="color:rgb(255,0,0)">扩展 A 区: </span>㐀 㐁 㐂 㐃 㐄 㐅 㐆 㐇 㐈 㐉 㐊 㐋 㐌 㐍 㐎 㐏<br>
+          <span style="color:rgb(255,0,0)">扩展 B 区: </span>𠀀 𠀁 𠀂 𠀃 𠀄 𠀅 𠀆 𠀇 𠀈 𠀉 𠀊 𠀋 𠀌 𠀍 𠀎 𠀏<br>
+          <span style="color:rgb(255,0,0)">2003 新增: </span>龦 龧 龨 龩 龪 龫 龬 龭 龮 龯 龰 龱 龲 龳 龴 龵<br>
+          <span style="color:rgb(255,0,0)">扩展 C 区: </span>𪜀 𪜁 𪜂 𪜃 𪜄 𪜅 𪜆 𪜇 𪜈 𪜉 𪜊 𪜋 𪜌 𪜍 𪜎 𪜏<br>
+          <span style="color:rgb(255,0,0)">扩展 D 区: </span>𫝀 𫝁 𫝂 𫝃 𫝄 𫝅 𫝆 𫝇 𫝈 𫝉 𫝊 𫝋 𫝌 𫝍 𫝎 𫝏<br>
+          <span style="color:rgb(255,0,0)">2012 新增: </span>鿌<br>
+          <span style="color:rgb(255,0,0)">扩展 E 区: </span>𫠠 𫠡 𫠢 𫠣 𫠤 𫠥 𫠦 𫠧 𫠨 𫠩 𫠪 𫠫 𫠬 𫠭 𫠮 𫠯<br>
+          <span style="color:rgb(255,0,0)">2015 "急用汉字": </span>鿍 鿎 鿏 䲤 鿑 鿒 鿓 鿔 鿕<br>
+          <span style="color:rgb(255,0,0)">扩展 F 区: </span>𬺰 𬺱 𬺲 𬺳 𬺴 𬺵 𬺶 𬺷 𬺸 𬺹 𬺺 𬺻 𬺼 𬺽 𬺾 𬺿<br>
           <span style="color:rgb(255,0,0)">2017 新增: </span>鿥 鿦 鿧 鿨 鿩 鿪 鿖 鿗 鿙 鿚 鿜 鿠<br>
           <span style="color:rgb(255,0,0)">2018 新增: </span>鿫 鿬 鿭 鿮 鿯<br>
-          <span style="color:rgb(255,0,0)">扩展 G 区: </span>𰻝 𰻞 𱁬 𰜩 𰀴 𰅐 𰆀 𰈀 𰊐 𰊠 𰍠 𰔀<br>
-          <span style="color:rgb(255,0,0)">急用科学与技术用字: </span>鿰 鿱 鿲 鿳 鿴 鿵 鿶 鿷 鿸 鿹 鿺 鿻 鿼<br>
-          <span style="color:rgb(255,0,0)">需分离的汉字: </span>䶶 䶷 䶸 䶹 䶺 䶻 䶼 䶽 䶾 䶿<br>
-          <span style="color:rgb(255,0,0)">昆曲工尺谱用字: </span>𪛗 𪛘 𪛙 𪛚 𪛛 𪛜 𪛝<br>
-          <span style="color:rgb(255,0,0)">扩展 H 区: </span>𱍐 𱍧 𱎺 𱏫 𱐝 𱚋 𱣋 𱩁 𱰜 𱹫 𲁩 𲎯<br>
-          <span style="color:rgb(255,0,0)">扩展 I 区: </span>𮯰 𮱅 𮱸 𮲫 𮳞 𮴆 𮴼 𮵮 𮶖 𮷊 𮸌 𮹝<br>
+          <span style="color:rgb(255,0,0)">扩展 G 区: </span>𰀀 𰀁 𰀂 𰀃 𰀄 𰀅 𰀆 𰀇 𰀈 𰀉 𰀊 𰀋 𰀌 𰀍 𰀎 𰀏<br>
+          <span style="color:rgb(255,0,0)">2021 "急用科学与技术用字": </span>鿰 鿱 鿲 鿳 鿴 鿵 鿶 鿷 鿸 鿹 鿺 鿻 鿼<br>
+          <span style="color:rgb(255,0,0)">2021 "10 个需分离的汉字": </span>䶶 䶷 䶸 䶹 䶺 䶻 䶼 䶽 䶾 䶿<br>
+          <span style="color:rgb(255,0,0)">2021 "昆曲工尺谱用字": </span>𪛗 𪛘 𪛙 𪛚 𪛛 𪛜 𪛝<br>
+          <span style="color:rgb(255,0,0)">2021 新增: </span>鿽 鿾 鿿 𪛞 𪛟 𫜵 𫜶 𫜷 𫜸<br>
+          <span style="color:rgb(255,0,0)">扩展 H 区: </span>𱍐 𱍑 𱍒 𱍓 𱍔 𱍕 𱍖 𱍗 𱍘 𱍙 𱍚 𱍛 𱍜 𱍝 𱍞 𱍟<br>
+          <span style="color:rgb(255,0,0)">2022 新增: </span>𫜹<br>
+          <span style="color:rgb(255,0,0)">扩展 I 区: </span>𮯰 𮯱 𮯲 𮯳 𮯴 𮯵 𮯶 𮯷 𮯸 𮯹 𮯺 𮯻 𮯼 𮯽 𮯾 𮯿<br>
+          <span style="color:rgb(255,0,0)">扩展 J 区: </span>𲎰 𲎱 𲎲 𲎳 𲎴 𲎵 𲎶 𲎷 𲎸 𲎹 𲎺 𲎻 𲎼 𲎽 𲎾 𲎿<br>
         </nav>
       </nav>
     </nav>
