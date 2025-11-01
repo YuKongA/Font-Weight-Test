@@ -1,10 +1,10 @@
 <template>
     <div class="font-weight-display">
         <p v-for="(weight, index) in weights" :key="weight" :style="{ fontWeight: weight }" :class="{
-            'weight-item': true,
-            'last-weight': index === weights.length - 1
+            'mb-xl': true,
+            'mb-0': index === weights.length - 1
         }">
-            <span class="weight-label">-{{ weight }}-</span>
+            <span class="weight-label mb-sm">-{{ weight }}-</span>
             <span v-html="sampleText"></span><br>
             <span v-html="sampleTextItalic"></span>
         </p>
@@ -46,16 +46,7 @@ export default {
     text-align: center;
 }
 
-.weight-item {
-    margin-bottom: 1.5em;
-}
-
 .weight-label {
     display: block;
-    margin-bottom: 0.5em;
-}
-
-.last-weight {
-    margin-bottom: 0;
 }
 </style>

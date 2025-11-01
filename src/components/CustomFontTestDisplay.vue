@@ -1,18 +1,18 @@
 <template>
     <nav id="sans-serif">
-        <nav class="slider-group">
+        <nav class="slider-group mb-md">
             <label>字重: {{ fontWeight }}</label>
             <input type="range" v-model="fontWeight" v-bind="weightRangeProps" @input="updateRangeStyle('weightRange')"
                 ref="weightRange" class="custom-range">
         </nav>
 
-        <nav class="slider-group">
+        <nav class="slider-group mb-md">
             <label>字号: {{ fontSize }}</label>
             <input type="range" v-model="fontSize" v-bind="sizeRangeProps" @input="updateRangeStyle('sizeRange')"
                 ref="sizeRange" class="custom-range">
         </nav>
 
-        <nav class="select-group">
+        <nav class="select-group mb-md">
             <label>字型:</label>
             <select v-model="selectedLang" class="custom-text-input">
                 <option v-for="lang in languageOptions" :key="lang.value" :value="lang.value">
@@ -21,7 +21,7 @@
             </select>
         </nav>
 
-        <nav class="text-input-group">
+        <nav class="text-input-group mb-md">
             <label>文本: </label>
             <input type="text" v-model="testText" class="custom-text-input" placeholder="输入测试文本...">
         </nav>
@@ -128,12 +128,21 @@ export default {
     cursor: pointer;
     box-shadow: none;
     background: var(--color-footer-background);
+    border-radius: 999px;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-user-select: none;
     user-select: none;
     box-shadow: none;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+    height: 30px;
+    background: transparent;
+    border: none;
+    border-radius: 999px;
 }
 
 .custom-range::-webkit-slider-thumb {
@@ -195,12 +204,6 @@ export default {
     margin: 0;
     padding: 0;
     line-height: 1.5;
-}
-
-.slider-group,
-.select-group,
-.text-input-group {
-    margin-bottom: 0.6rem;
 }
 
 .slider-group>label,

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2 style="font-weight: 600;">正常字体</h2>
+    <h2 class="section-title">正常字体</h2>
     <nav class="round">
       <nav id="monospace">
         <ComparisonDisplay fontFamily="monospace" language="en" :weightShow=true
@@ -8,7 +8,7 @@
       </nav>
     </nav>
 
-    <h2 style="font-weight: 600;">倾斜字体</h2>
+    <h2 class="section-title">倾斜字体</h2>
     <nav class="round">
       <nav id="monospace">
         <ComparisonDisplay fontFamily="monospace" language="en" :weightShow=true
@@ -16,7 +16,7 @@
       </nav>
     </nav>
 
-    <h2 style="font-weight: 600;">更多示例</h2>
+    <h2 class="section-title">更多示例</h2>
     <nav class="round">
       <nav id="monospace">
         <MoreDisplay />
