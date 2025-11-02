@@ -22,7 +22,7 @@
 
   /* 页脚相关 */
   --footer-height: 30px;
-  --footer-bottom-margin: 10px;
+  --safe-area-max-inset-bottom: env(safe-area-max-inset-bottom, 36px);
   --content-bottom-margin: calc(var(--footer-height) + var(--footer-bottom-margin) + 20px);
 
   /* 动画 */
@@ -43,7 +43,7 @@ body {
   color: var(--color-text);
   line-height: 1.45;
   min-height: 100vh;
-  background-attachment: fixed;
+  padding-bottom: calc(60px + var(--safe-area-max-inset-bottom));
 }
 
 a {
@@ -288,31 +288,25 @@ h2 {
 /* 页脚
 ----------------------------------------*/
 #footer {
-  position: fixed;
   font-family: "MiSans VF";
-  bottom: var(--footer-bottom-margin);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 260px;
+  position: fixed;
+  bottom: 0;
   height: var(--footer-height);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 260px;
   background-color: var(--color-footer-background);
   backdrop-filter: blur(10px);
   color: var(--color-footer-text);
   padding: 0;
   border-radius: 10px;
   text-align: center;
-  transition: background-color 0.5s ease, color 0.5s ease, transform 0.4s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-glass-border);
   box-shadow: 0 6px 20px rgba(20, 20, 40, 0.12);
-}
-
-#footer:hover {
-  color: var(--color-background);
-  background-color: var(--color-footer-hover);
-  transform: translateY(-2px);
 }
 
 /* 页脚链接
@@ -332,10 +326,6 @@ a.footer-msg:active {
 
 #footer a.footer-msg {
   transition: color 0.5s ease;
-}
-
-#footer:hover a.footer-msg {
-  color: var(--color-background);
 }
 
 #footer:hover a.footer-msg:hover {
