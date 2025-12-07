@@ -408,9 +408,47 @@ a.footer-msg:active {
   font-weight: 600;
 }
 
-/* 替换白名单内联样式 */
-.wrap-normal {
+/* CJK 分组网格 */
+.cjk-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.cjk-item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  background: var(--color-glass-bg);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 0;
+}
+
+.cjk-item .accent {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.cjk-text {
+  letter-spacing: 0.1px;
+}
+
+/* gb-block 单列 */
+.gb-block {
   white-space: normal;
+  word-break: keep-all;
+  hyphens: none;
+  line-height: 1.8;
+  font-size: clamp(15px, 1.9vw, 18px);
+  padding: 2px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .cjk-columns {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
 }
 
 /* 标签文本（次级标题） */
