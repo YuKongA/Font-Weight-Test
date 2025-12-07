@@ -9,28 +9,28 @@
     --vt-c-text-dark-2: rgb(204, 204, 214);
 
     /* Modern glass palette */
-    --vt-c-primary-1: 219, 88, 255;   /* rgb tuple */
-    --vt-c-primary-2: 100, 170, 255;  /* rgb tuple */
-    --vt-c-surface-1: 255, 255, 255;  /* glass light */
-    --vt-c-surface-2: 20, 20, 24;     /* glass dark */
+    --vt-c-primary-1: 20, 184, 166;
+    --vt-c-primary-2: 99, 102, 241;
+    --vt-c-surface-1: 255, 255, 255;
+    --vt-c-surface-2: 20, 20, 24;
 
-    --vt-c-active-color-1: rgb(170, 140, 255);
-    --vt-c-active-color-2: rgb(100, 140, 255);
+    --vt-c-active-color-1: rgb(20, 184, 166);
+    --vt-c-active-color-2: rgb(99, 102, 241);
 
-    --vt-c-hover-color-1: rgb(150, 120, 245);
-    --vt-c-hover-color-2: rgb(120, 160, 255);
+    --vt-c-hover-color-1: rgb(45, 212, 191);
+    --vt-c-hover-color-2: rgb(129, 140, 248);
 
-    --vt-c-footer-background-1: rgba(170, 140, 255, 0.16);
-    --vt-c-footer-background-2: rgba(100, 140, 255, 0.16);
+    --vt-c-footer-background-1: rgba(20, 184, 166, 0.16);
+    --vt-c-footer-background-2: rgba(99, 102, 241, 0.16);
 
     --vt-c-footer-text-1: rgb(55, 50, 70);
     --vt-c-footer-text-2: rgb(225, 230, 250);
 
-    --vt-c-footer-hover-1: rgba(170, 140, 255, 0.6);
-    --vt-c-footer-hover-2: rgba(100, 140, 255, 0.6);
+    --vt-c-footer-hover-1: rgba(20, 184, 166, 0.6);
+    --vt-c-footer-hover-2: rgba(99, 102, 241, 0.6);
 
-    --vt-c-footer-link-hover-1: rgb(60, 220, 120);
-    --vt-c-footer-link-hover-2: rgb(120, 190, 255);
+    --vt-c-footer-link-hover-1: rgb(56, 189, 248);
+    --vt-c-footer-link-hover-2: rgb(129, 140, 248);
 }
 
 /* semantic color variables for this project */
@@ -44,8 +44,8 @@
     --color-footer-hover: var(--vt-c-footer-hover-1);
     --color-footer-link-hover: var(--vt-c-footer-link-hover-1);
     --color-glass-bg: rgba(var(--vt-c-surface-1), 0.55);
-    --color-glass-border: rgba(180, 180, 220, 0.35);
-    --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary-1),0.15), rgba(var(--vt-c-primary-2),0.10));
+    --color-glass-border: rgba(160, 200, 190, 0.35);
+    --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary-1),0.12), rgba(var(--vt-c-primary-2),0.08));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -59,7 +59,7 @@
         --color-footer-hover: var(--vt-c-footer-hover-2);
         --color-footer-link-hover: var(--vt-c-footer-link-hover-2);
         --color-glass-bg: rgba(var(--vt-c-surface-2), 0.55);
-        --color-glass-border: rgba(120, 120, 160, 0.35);
-        --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary-2),0.12), rgba(var(--vt-c-primary-1),0.18));
+        --color-glass-border: rgba(100, 130, 200, 0.35);
+        --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary-2),0.10), rgba(var(--vt-c-primary-1),0.16));
     }
 }

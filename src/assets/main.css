@@ -77,8 +77,8 @@ a {
   position: sticky;
   padding-top: 35px;
   z-index: 20;
-  backdrop-filter: saturate(1.3) blur(12px);
-  -webkit-backdrop-filter: saturate(1.3) blur(12px);
+  backdrop-filter: saturate(1.15) blur(12px);
+  -webkit-backdrop-filter: saturate(1.15) blur(12px);
 }
 
 /* 顶部整体容器 */
@@ -113,8 +113,8 @@ h2 {
   transition: var(--transition-slow);
   background: var(--color-glass-bg);
   box-shadow: 0 8px 24px rgba(20, 20, 40, 0.12);
-  backdrop-filter: saturate(1.2) blur(10px);
-  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.1) blur(10px);
+  -webkit-backdrop-filter: saturate(1.1) blur(10px);
   animation: fadeUp 500ms ease both;
 }
 
@@ -168,8 +168,8 @@ h2 {
   overflow: hidden;
   transition: var(--transition-normal);
   background: var(--color-glass-bg);
-  backdrop-filter: saturate(1.2) blur(10px);
-  -webkit-backdrop-filter: saturate(1.2) blur(10px);
+  backdrop-filter: saturate(1.1) blur(10px);
+  -webkit-backdrop-filter: saturate(1.1) blur(10px);
   list-style: none;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
