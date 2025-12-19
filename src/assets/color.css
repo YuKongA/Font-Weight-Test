@@ -1,4 +1,8 @@
 :root {
+    --vt-c-primary: 20, 184, 166;
+    --vt-c-surface-1: 255, 255, 255;
+    --vt-c-surface-2: 20, 20, 24;
+
     --vt-c-white: rgb(252, 252, 255);
     --vt-c-black: rgb(18, 18, 22);
 
@@ -8,58 +12,43 @@
     --vt-c-text-dark-1: rgb(240, 240, 245);
     --vt-c-text-dark-2: rgb(204, 204, 214);
 
-    /* Modern glass palette */
-    --vt-c-primary-1: 20, 184, 166;
-    --vt-c-primary-2: 99, 102, 241;
-    --vt-c-surface-1: 255, 255, 255;
-    --vt-c-surface-2: 20, 20, 24;
-
-    --vt-c-active-color-1: rgb(20, 184, 166);
-    --vt-c-active-color-2: rgb(99, 102, 241);
-
-    --vt-c-hover-color-1: rgb(45, 212, 191);
-    --vt-c-hover-color-2: rgb(129, 140, 248);
-
-    --vt-c-footer-background-1: rgba(20, 184, 166, 0.16);
-    --vt-c-footer-background-2: rgba(99, 102, 241, 0.16);
+    --vt-c-active-color: rgb(20, 184, 166);
+    --vt-c-hover-color: rgb(45, 212, 191);
 
     --vt-c-footer-text-1: rgb(55, 50, 70);
     --vt-c-footer-text-2: rgb(225, 230, 250);
 
-    --vt-c-footer-hover-1: rgba(20, 184, 166, 0.6);
-    --vt-c-footer-hover-2: rgba(99, 102, 241, 0.6);
-
-    --vt-c-footer-link-hover-1: rgb(56, 189, 248);
-    --vt-c-footer-link-hover-2: rgb(129, 140, 248);
+    --vt-c-footer-background: rgba(20, 184, 166, 0.16);
+    --vt-c-footer-hover: rgba(20, 184, 166, 0.6);
+    --vt-c-footer-link-hover: rgb(56, 189, 248);
 }
 
-/* semantic color variables for this project */
 :root {
     --color-background: var(--vt-c-white);
     --color-text: var(--vt-c-text-light-1);
-    --color-active: var(--vt-c-active-color-1);
-    --color-hover: var(--vt-c-hover-color-1);
-    --color-footer-background: var(--vt-c-footer-background-1);
+    --color-active: var(--vt-c-active-color);
+    --color-hover: var(--vt-c-hover-color);
+    --color-footer-background: var(--vt-c-footer-background);
     --color-footer-text: var(--vt-c-footer-text-1);
-    --color-footer-hover: var(--vt-c-footer-hover-1);
-    --color-footer-link-hover: var(--vt-c-footer-link-hover-1);
+    --color-footer-hover: var(--vt-c-footer-hover);
+    --color-footer-link-hover: var(--vt-c-footer-link-hover);
     --color-glass-bg: rgba(var(--vt-c-surface-1), 0.55);
     --color-glass-border: rgba(160, 200, 190, 0.35);
-    --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary-1),0.12), rgba(var(--vt-c-primary-2),0.08));
+    --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary), 0.12), rgba(var(--vt-c-primary), 0.06));
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --color-background: var(--vt-c-black);
         --color-text: var(--vt-c-text-dark-2);
-        --color-active: var(--vt-c-active-color-2);
-        --color-hover: var(--vt-c-hover-color-2);
-        --color-footer-background: var(--vt-c-footer-background-2);
+        --color-active: var(--vt-c-active-color);
+        --color-hover: var(--vt-c-hover-color);
+        --color-footer-background: var(--vt-c-footer-background);
         --color-footer-text: var(--vt-c-footer-text-2);
-        --color-footer-hover: var(--vt-c-footer-hover-2);
-        --color-footer-link-hover: var(--vt-c-footer-link-hover-2);
+        --color-footer-hover: var(--vt-c-footer-hover);
+        --color-footer-link-hover: var(--vt-c-footer-link-hover);
         --color-glass-bg: rgba(var(--vt-c-surface-2), 0.55);
         --color-glass-border: rgba(100, 130, 200, 0.35);
-        --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary-2),0.10), rgba(var(--vt-c-primary-1),0.16));
+        --color-gradient-1: linear-gradient(135deg, rgba(var(--vt-c-primary), 0.16), rgba(var(--vt-c-primary), 0.10));
     }
 }
