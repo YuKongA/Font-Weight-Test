@@ -37,7 +37,7 @@ a {
 /* 字体族
 ----------------------------------------*/
 #sans-serif {
-  font-family: sans-serif, MingLiU-ExtB, HanaMinA, HanaMinB, Jigmo3, "HCR Dotum LVT", "HCR Batang LVT", SimSun-ExtG, SimSun-ExtB, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16, Unicode内码天珩输入法配套字体, "WenJin Mincho Plane 3", "WenJin Mincho Plane 2", "WenJin Mincho Plane 0", ZhongHuaSongPlane15, ZhongHuaSongPlane02, ZhongHuaSongPlane00, 方正宋体S-超大字符集, "方正宋体S-超大字符集(SIP)", 文泉驿等宽正黑, "BabelStone Han Plain", "BabelStone Han", FZSong-Extended, "Arial Unicode MS", Code2002, DFSongStd, "STHeiti SC", unifont, LastResort, "Plangothic P2", sim-ch_n5100;
+  font-family: sans-serif, "MiSans L3", "HYZhongHei L3", "HYQiHei L3", "vivo Sans SC L3", "Plangothic P1", MingLiU-ExtB, HanaMinA, HanaMinB, Jigmo, Jigmo2, Jigmo3, "HCR Dotum LVT", "HCR Batang LVT", SimSun-ExtG, SimSun-ExtB, TH-Tshyn-P0, TH-Tshyn-P1, TH-Tshyn-P2, TH-Tshyn-P16, Unicode内码天珩输入法配套字体, "WenJin Mincho Plane 3", "WenJin Mincho Plane 2", "WenJin Mincho Plane 0", ZhongHuaSongPlane15, ZhongHuaSongPlane02, ZhongHuaSongPlane00, 方正宋体S-超大字符集, "方正宋体S-超大字符集(SIP)", 文泉驿等宽正黑, "BabelStone Han Plain", "BabelStone Han", FZSong-Extended, "Arial Unicode MS", Code2002, DFSongStd, "STHeiti SC", unifont, LastResort, "Plangothic P2", sim-ch_n5100;
 }
 
 #serif {
