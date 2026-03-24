@@ -1,36 +1,20 @@
 @import "color.css";
 
-/* CSS 变量定义 
+/* 变量
 ----------------------------------------*/
 :root {
-  /* 基础尺寸 */
   --base-font: clamp(14px, 1.7vw, 16px);
   --heading-font: clamp(20px, 2.3vw, 26px);
-  --wrapper-font: clamp(26px, 3.3vw, 34px);
   --nav-font: clamp(15px, 1.8vw, 19px);
-
-  /* 布局尺寸 */
   --content-width: 90%;
   --card-padding: 0.4cm;
   --side-margin: 5%;
-  --border-radius: 0.3cm;
-  --border-color: rgba(150, 150, 200, 0.35);
-
-  /* 间距 */
   --title-margin-top: 0.4cm;
   --title-margin-bottom: 0.2cm;
-
-  /* 页脚相关 */
-  --footer-height: 30px;
-  --safe-area-max-inset-bottom: env(safe-area-max-inset-bottom, 36px);
-  --content-bottom-margin: calc(var(--footer-height) + var(--footer-bottom-margin) + 20px);
-
-  /* 动画 */
-  --transition-normal: all 0.28s ease;
-  --transition-slow: all 0.6s ease;
+  --transition: all 0.28s ease;
 }
 
-/* 基础重置和通用样式
+/* 重置
 ----------------------------------------*/
 * {
   margin: 0;
@@ -39,11 +23,10 @@
 }
 
 body {
-  background: var(--color-gradient-1), var(--color-background);
+  background: var(--color-background);
   color: var(--color-text);
   line-height: 1.45;
   min-height: 100vh;
-  padding-bottom: calc(60px + var(--safe-area-max-inset-bottom));
 }
 
 a {
@@ -51,6 +34,8 @@ a {
   color: inherit;
 }
 
+/* 字体族
+----------------------------------------*/
 #sans-serif {
   font-family: sans-serif;
 }
@@ -63,36 +48,100 @@ a {
   font-family: monospace;
 }
 
-/* 布局容器
+/* 顶栏
 ----------------------------------------*/
-#app {
-  min-height: 100vh;
-  padding-bottom: var(--content-bottom-margin);
-  box-sizing: border-box;
-}
-
-/* 顶部导航（玻璃态）
-----------------------------------------*/
-.app-header.glass-nav {
+.app-header {
   position: sticky;
-  padding-top: 35px;
+  top: 0;
   z-index: 20;
-  backdrop-filter: saturate(1.15) blur(12px);
-  -webkit-backdrop-filter: saturate(1.15) blur(12px);
+  padding: max(12px, env(safe-area-inset-top)) 0 12px;
+  background: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+  transition: var(--transition);
 }
 
-/* 顶部整体容器 */
-.header-shell {
-  margin-top: 10px;
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: var(--content-width);
+  margin: 0 var(--side-margin);
 }
 
-/* 标题样式
-----------------------------------------*/
-h2 {
+.brand {
   color: var(--color-text);
-  transition: var(--transition-normal);
+  font-family: "MiSans VF";
+  font-weight: 600;
+  font-size: clamp(20px, 2.5vw, 26px);
+  text-align: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.2px;
+  transition: var(--transition);
 }
 
+/* 导航
+----------------------------------------*/
+.nav-list {
+  position: relative;
+  padding: 4px;
+  border-radius: 12px;
+  background: var(--color-nav-bg);
+  list-style: none;
+  display: flex;
+  gap: 4px;
+}
+
+.nav-list li {
+  flex: 1;
+}
+
+.nav-indicator {
+  position: absolute;
+  background-color: var(--color-accent);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease;
+  transform-origin: left center;
+  will-change: transform;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.nav-link {
+  position: relative;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  font-size: var(--nav-font);
+  padding: 0.4em 0.6em;
+  color: var(--color-text);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (hover: hover) {
+  .nav-link:hover {
+    background-color: var(--color-nav-hover);
+  }
+}
+
+.nav-link:active {
+  background-color: var(--color-nav-hover);
+}
+
+.nav-link.active {
+  font-weight: 600;
+  color: #fff;
+  background-color: transparent;
+}
+
+/* 内容区 — 标题
+----------------------------------------*/
 h2 {
   font-size: var(--heading-font);
   margin: var(--title-margin-top) var(--side-margin) var(--title-margin-bottom);
@@ -101,20 +150,18 @@ h2 {
   letter-spacing: 0.2px;
 }
 
-/* 卡片组件
+/* 内容区 — 卡片
 ----------------------------------------*/
 .round {
   width: var(--content-width);
   margin: 0 var(--side-margin);
   padding: var(--card-padding);
   border-radius: 18px;
-  border: 1px solid var(--color-glass-border);
+  border: 1px solid var(--color-border);
   font-size: var(--base-font);
-  transition: var(--transition-slow);
-  background: var(--color-glass-bg);
-  box-shadow: 0 8px 24px rgba(20, 20, 40, 0.12);
-  backdrop-filter: saturate(1.1) blur(10px);
-  -webkit-backdrop-filter: saturate(1.1) blur(10px);
+  background: var(--color-card-bg);
+  box-shadow: 0 8px 24px var(--color-shadow);
+  transition: all 0.6s ease;
   animation: fadeUp 500ms ease both;
 }
 
@@ -126,135 +173,23 @@ h2 {
   margin-bottom: 0.15cm;
 }
 
-.round:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(20, 20, 40, 0.18);
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (hover: hover) {
+  .round:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px var(--color-shadow-hover);
   }
 }
 
-/* 掠影动画关键帧 */
-@keyframes sheen {
-  0% {
-    transform: translateX(-120%);
-  }
-
-  100% {
-    transform: translateX(120%);
-  }
-}
-
-/* 导航样式
-----------------------------------------*/
-.ul {
-  width: var(--content-width);
-  margin: 0 var(--side-margin);
-  padding: 0;
-  font-size: var(--base-font);
-  border-radius: 18px;
-  border: 1px solid var(--color-glass-border);
-  box-shadow: 0 8px 24px rgba(20, 20, 40, 0.12);
-  line-height: clamp(2.6, 2.6 + 1.5vw, 4.6);
-  overflow: hidden;
-  transition: var(--transition-normal);
-  background: var(--color-glass-bg);
-  backdrop-filter: saturate(1.1) blur(10px);
-  -webkit-backdrop-filter: saturate(1.1) blur(10px);
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-
-.li {
-  transition: var(--transition-normal);
-}
-
-.li:last-child {
-  border-right: none;
-}
-
-.li a {
-  display: block;
-  text-align: center;
-  font-size: var(--nav-font);
-  padding: clamp(0.3em, 0.3em + 0.8vw, 0.6em) 0;
-  transition: var(--transition-normal);
-  color: var(--color-text);
-  font-weight: 500;
-  letter-spacing: 0.1px;
-}
-
-/* 交互状态
-----------------------------------------*/
-.nothing {
-  position: relative;
-  transition: var(--transition-normal);
-  background-color: transparent;
-  overflow: hidden;
-  /* 让掠影在圆角内裁切 */
-}
-
-.nothing:hover {
-  background-color: var(--color-hover);
-  color: var(--color-background);
-  box-shadow: 0 8px 18px rgba(20, 20, 40, 0.12), inset 0 -2px 8px rgba(255, 255, 255, 0.08);
-}
-
-.nothing:active {
-  background-color: var(--color-active);
-}
-
-.nothing.active {
-  background-color: var(--color-active);
-  font-weight: 600;
-  color: var(--color-background);
-}
-
-/* 掠影（shine）效果：在 hover 时从左到右扫过 */
-.nothing::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.22) 45%,
-      rgba(255, 255, 255, 0) 100%);
-  transform: translateX(-120%);
-  opacity: 0;
-}
-
-.nothing:hover::before {
-  opacity: 0.85;
-  animation: sheen 700ms ease forwards;
-}
-
-.nothing.active::before {
-  opacity: 0;
-}
-
-/* 字符表格
+/* 内容区 — 字符表格
 ----------------------------------------*/
 .character-table {
   width: 100%;
   border-collapse: collapse;
-  backdrop-filter: blur(4px);
 }
 
 .character-table th,
 .character-table td {
-  border: 1px solid var(--color-glass-border);
+  border: 1px solid var(--color-border);
   padding: 8px 12px;
   text-align: center;
   font-size: 16px;
@@ -263,10 +198,8 @@ h2 {
 
 .character-table th {
   font-weight: 600;
-  background-color: transparent;
 }
 
-/* 移除最外层边框 */
 .character-table tr:first-child th {
   border-top: none;
 }
@@ -285,130 +218,8 @@ h2 {
   border-right: none;
 }
 
-/* 页脚
+/* 内容区 — CJK 网格
 ----------------------------------------*/
-#footer {
-  font-family: "MiSans VF";
-  position: fixed;
-  bottom: 0;
-  height: var(--footer-height);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 10px);
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 260px;
-  background-color: var(--color-footer-background);
-  backdrop-filter: blur(10px);
-  color: var(--color-footer-text);
-  padding: 0;
-  border-radius: 10px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--color-glass-border);
-  box-shadow: 0 6px 20px rgba(20, 20, 40, 0.12);
-}
-
-/* 页脚链接
-----------------------------------------*/
-a.footer-msg {
-  color: var(--color-footer-text);
-  transition: color 0.3s;
-}
-
-a.footer-msg:visited {
-  color: var(--color-footer-text);
-}
-
-a.footer-msg:active {
-  color: #FFCC7A;
-}
-
-#footer a.footer-msg {
-  transition: color 0.5s ease;
-}
-
-#footer:hover a.footer-msg:hover {
-  color: var(--color-footer-link-hover);
-}
-
-/* 响应式布局
-----------------------------------------*/
-@media screen and (min-width: 768px) {
-  :root {
-    --content-width: min(85%, 800px);
-    --side-margin: auto;
-  }
-
-  .round {
-    line-height: 1.6;
-  }
-
-  .ul {
-    margin: 0 auto 0.5cm;
-    max-width: 800px;
-  }
-
-  h2 {
-    margin: var(--title-margin-top) auto var(--title-margin-bottom);
-    text-align: left;
-    max-width: 800px;
-  }
-
-  .wrapper {
-    margin: 1cm auto 0.8cm;
-    max-width: 800px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  :root {
-    --content-width: min(75%, 900px);
-  }
-
-  .ul,
-  h2,
-  .wrapper {
-    max-width: 900px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  :root {
-    --content-width: min(70%, 1000px);
-  }
-
-  .ul,
-  h2,
-  .wrapper {
-    max-width: 1000px;
-  }
-}
-
-/* 包装器
-----------------------------------------*/
-.wrapper {
-  color: var(--color-text);
-  font-family: "MiSans VF";
-  font-weight: 600;
-  text-align: center;
-  font-size: var(--wrapper-font);
-  margin: 0 auto;
-  transition: var(--transition-normal);
-  letter-spacing: 0.2px;
-}
-
-/* 统一强调色 */
-.accent {
-  color: var(--color-active);
-}
-
-/* 视图分组标题 */
-.section-title {
-  font-weight: 600;
-}
-
-/* CJK 分组网格 */
 .cjk-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -417,12 +228,10 @@ a.footer-msg:active {
 
 .cjk-item {
   break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  background: var(--color-glass-bg);
-  border: 1px solid var(--color-glass-border);
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 12px;
-  margin-bottom: 0;
 }
 
 .cjk-item .accent {
@@ -434,7 +243,8 @@ a.footer-msg:active {
   letter-spacing: 0.1px;
 }
 
-/* gb-block 单列 */
+/* 内容区 — 编码字符块
+----------------------------------------*/
 .gb-block {
   white-space: normal;
   word-break: keep-all;
@@ -444,19 +254,42 @@ a.footer-msg:active {
   padding: 2px 0;
 }
 
-@media screen and (min-width: 1024px) {
-  .cjk-columns {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 14px;
-  }
+/* 页脚
+----------------------------------------*/
+#footer {
+  font-family: "MiSans VF";
+  padding: 24px 0 calc(12px + env(safe-area-inset-bottom, 0px));
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text);
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
 }
 
-/* 标签文本（次级标题） */
+#footer:hover {
+  opacity: 0.6;
+}
+
+a.footer-msg {
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a.footer-msg:hover {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/* 工具类
+----------------------------------------*/
+.accent {
+  color: var(--color-accent);
+}
+
 .label {
   font-weight: 500;
 }
 
-/* 间距工具类（简短且常用） */
 .mb-0 {
   margin-bottom: 0 !important;
 }
@@ -473,7 +306,20 @@ a.footer-msg:active {
   margin-bottom: 1.5em;
 }
 
-/* 页面路由切换动画 */
+/* 动画
+----------------------------------------*/
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: opacity 250ms ease, transform 250ms ease;
@@ -483,4 +329,76 @@ a.footer-msg:active {
 .page-leave-to {
   opacity: 0;
   transform: translateY(8px);
+}
+
+/* 响应式
+----------------------------------------*/
+@media screen and (min-width: 768px) {
+  :root {
+    --content-width: min(85%, 800px);
+    --side-margin: auto;
+  }
+
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+
+  .brand {
+    text-align: left;
+    font-size: clamp(18px, 2vw, 22px);
+  }
+
+  .nav-list {
+    flex: 1;
+    max-width: 520px;
+  }
+
+  .round {
+    line-height: 1.6;
+  }
+
+  h2 {
+    margin: var(--title-margin-top) auto var(--title-margin-bottom);
+    text-align: left;
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --content-width: min(75%, 900px);
+  }
+
+  .header-inner,
+  h2 {
+    max-width: 900px;
+  }
+
+  .nav-list {
+    max-width: 560px;
+  }
+
+  .cjk-columns {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --content-width: min(70%, 1000px);
+  }
+
+  .header-inner,
+  h2 {
+    max-width: 1000px;
+  }
+
+  .nav-list {
+    max-width: 600px;
+  }
 }

@@ -1,29 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
         {
-            "source": "/sans-serif",
-            "destination": "./",
-            "permanent": false
-        },
-        {
-            "source": "/serif",
-            "destination": "./",
-            "permanent": false
-        },
-        {
-            "source": "/monospace",
-            "destination": "./",
-            "permanent": false
-        },
-        {
-            "source": "/ja-ko",
-            "destination": "./",
-            "permanent": false
-        },
-        {
-            "source": "/character-set",
-            "destination": "./",
-            "permanent": false
+            "source": "/(.*)",
+            "destination": "/index.html"
         }
     ]
 }

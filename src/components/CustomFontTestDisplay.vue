@@ -1,38 +1,38 @@
 <template>
-    <nav id="sans-serif">
-        <nav class="slider-group mb-md">
+    <div id="sans-serif">
+        <div class="slider-group mb-md">
             <label>字重: {{ fontWeight }}</label>
             <input type="range" v-model="fontWeight" v-bind="weightRangeProps" @input="updateRangeStyle('weightRange')"
                 ref="weightRange" class="custom-range">
-        </nav>
+        </div>
 
-        <nav class="slider-group mb-md">
+        <div class="slider-group mb-md">
             <label>字号: {{ fontSize }}</label>
             <input type="range" v-model="fontSize" v-bind="sizeRangeProps" @input="updateRangeStyle('sizeRange')"
                 ref="sizeRange" class="custom-range">
-        </nav>
+        </div>
 
-        <nav class="select-group mb-md">
+        <div class="select-group mb-md">
             <label>字型:</label>
             <select v-model="selectedLang" class="custom-text-input">
                 <option v-for="lang in languageOptions" :key="lang.value" :value="lang.value">
                     {{ lang.label }}
                 </option>
             </select>
-        </nav>
+        </div>
 
-        <nav class="text-input-group mb-md">
+        <div class="text-input-group mb-md">
             <label>文本: </label>
             <input type="text" v-model="testText" class="custom-text-input" placeholder="输入测试文本...">
-        </nav>
+        </div>
 
-        <nav class="preview-section">
+        <div class="preview-section">
             <label>示例:</label>
-            <nav class="preview-text">
+            <div class="preview-text">
                 <p :style="previewStyle" :lang="selectedLang">{{ testText }}</p>
-            </nav>
-        </nav>
-    </nav>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -98,8 +98,8 @@ export default {
             const value = (range.value - range.min) / (range.max - range.min) * 100;
             range.style.background = `linear-gradient(
                 to right, 
-                var(--color-footer-hover) ${value}%, 
-                var(--color-footer-background) ${value}%
+                var(--color-accent) ${value}%,
+                var(--color-nav-bg) ${value}%
             )`;
         }
     },
@@ -127,7 +127,7 @@ export default {
     border: none;
     cursor: pointer;
     box-shadow: none;
-    background: var(--color-footer-background);
+    background: var(--color-nav-bg);
     border-radius: 999px;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
@@ -135,7 +135,6 @@ export default {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-user-select: none;
     user-select: none;
-    box-shadow: none;
 }
 
 .custom-range::-webkit-slider-runnable-track {
@@ -172,7 +171,7 @@ export default {
     appearance: none;
     height: 30px;
     border-radius: 999px;
-    background: var(--color-footer-background);
+    background: var(--color-nav-bg);
     border: none;
     cursor: pointer;
     box-shadow: none;
@@ -187,7 +186,7 @@ export default {
     padding: 0 16px;
     border: none;
     border-radius: 999px;
-    background: var(--color-footer-background);
+    background: var(--color-nav-bg);
     color: var(--color-text);
     font-size: 0.9rem;
     text-align: left;

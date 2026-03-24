@@ -1,27 +1,27 @@
 <template>
     <main>
         <h2 class="section-title">正常字体</h2>
-        <nav class="round">
-            <nav id="sans-serif">
+        <section class="round">
+            <div id="sans-serif">
                 <ComparisonDisplay fontFamily="sans-serif" language="en" :weightShow=true
                     :characters="['这是一个示例 ABCDEFG abcdefg 012345']" />
-            </nav>
-        </nav>
+            </div>
+        </section>
 
         <h2 class="section-title">倾斜字体</h2>
-        <nav class="round">
-            <nav id="sans-serif">
+        <section class="round">
+            <div id="sans-serif">
                 <ComparisonDisplay fontFamily="sans-serif" language="en" :weightShow=true
                     :characters="['<i>这是一个示例 ABCDEFG abcdefg 012345</i>']" />
-            </nav>
-        </nav>
+            </div>
+        </section>
 
         <h2 class="section-title">更多示例</h2>
-        <nav class="round">
-            <nav id="sans-serif">
+        <section class="round">
+            <div id="sans-serif">
                 <MoreDisplay />
-            </nav>
-        </nav>
+            </div>
+        </section>
     </main>
 </template>
 
