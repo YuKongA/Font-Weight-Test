@@ -5,6 +5,19 @@
 本仓库使用 [Vue](https://vuejs.org/) + [Vite](https://vitejs.dev/) 创建
 
 ```
+2026.03.24
+- 编码页添加 CJK 回退字体列表, 改善稀有汉字显示
+- 修复 Vercel SPA 路由: rewrites 替代 redirects
+- 重构顶栏布局: PC 端左标题右选项卡, 移动端上标题下选项卡
+- 选项卡切换添加滑动指示器动画
+- 精简颜色体系: 去除渐变与玻璃态, 统一语义变量
+- 强调色由绿色更换为蓝色
+- 优化响应式布局与触屏交互
+- 声明支持深色模式 (color-scheme)
+- 语义化 HTML 结构
+- 字体 CDN 添加 preconnect, 移除冗余代码
+- CSS 体积优化: 8.3KB → 7.7KB (gzip 2.5KB)
+
 2025.09.08
 - CJK 添加扩展 J 区
 - 重新整理 CJK 节选
