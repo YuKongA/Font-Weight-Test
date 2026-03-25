@@ -14,14 +14,17 @@
       </div>
     </section>
   </main>
+  <AppFooter />
 </template>
 
 <script>
 import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
+import AppFooter from '../components/AppFooter.vue';
 
 export default {
   components: {
-    ComparisonDisplay
+    ComparisonDisplay,
+    AppFooter
   }
 }
 </script>

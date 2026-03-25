@@ -23,16 +23,19 @@
       </div>
     </section>
   </main>
+  <AppFooter />
 </template>
 
 <script>
 import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
 import MoreDisplay from '../components/FontMoreDisplay.vue';
+import AppFooter from '../components/AppFooter.vue';
 
 export default {
   components: {
     ComparisonDisplay,
-    MoreDisplay
+    MoreDisplay,
+    AppFooter
   }
 }
 </script>

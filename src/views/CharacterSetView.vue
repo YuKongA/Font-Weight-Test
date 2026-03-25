@@ -99,4 +99,15 @@
             </div>
         </section>
     </main>
+    <AppFooter />
 </template>
+
+<script>
+import AppFooter from '../components/AppFooter.vue';
+
+export default {
+    components: {
+        AppFooter
+    }
+}
+</script>

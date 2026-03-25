@@ -45,8 +45,25 @@ function updateIndicator() {
   }
 }
 
-onMounted(() => router.isReady().then(() => nextTick(updateIndicator)))
-watch(() => router.currentRoute.value.path, () => nextTick(updateIndicator))
+onMounted(() => router.isReady().then(() => {
+  nextTick(updateIndicator)
+  // 浏览器空闲时预加载所有懒加载页面
+  const prefetch = () => {
+    router.getRoutes().forEach(route => {
+      if (typeof route.components?.default === 'function') {
+        route.components.default()
+      }
+    })
+  }
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(prefetch)
+  } else {
+    setTimeout(prefetch, 1000)
+  }
+}))
+watch(() => router.currentRoute.value.path, () => {
+  nextTick(updateIndicator)
+})
 </script>
 
 <template>
@@ -80,7 +97,5 @@ watch(() => router.currentRoute.value.path, () => nextTick(updateIndicator))
     </div>
   </header>
 
-  <transition name="page" mode="out-in">
-    <RouterView />
-  </transition>
+  <RouterView />
 </template>

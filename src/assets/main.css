@@ -150,8 +150,13 @@ h2 {
   letter-spacing: 0.2px;
 }
 
-/* 内容区 — 卡片
+/* 内容区
 ----------------------------------------*/
+main {
+  padding-bottom: 22px;
+}
+
+/* 卡片 */
 .round {
   width: var(--content-width);
   margin: 0 var(--side-margin);
@@ -160,9 +165,8 @@ h2 {
   border: 1px solid var(--color-border);
   font-size: var(--base-font);
   background: var(--color-card-bg);
-  box-shadow: 0 8px 24px var(--color-shadow);
+  box-shadow: 0 4px 12px var(--color-shadow);
   transition: all 0.6s ease;
-  animation: fadeUp 500ms ease both;
 }
 
 .round:not(:last-child) {
@@ -176,7 +180,7 @@ h2 {
 @media (hover: hover) {
   .round:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 32px var(--color-shadow-hover);
+    box-shadow: 0 6px 16px var(--color-shadow-hover);
   }
 }
 
@@ -306,30 +310,6 @@ a.footer-msg:hover {
   margin-bottom: 1.5em;
 }
 
-/* 动画
-----------------------------------------*/
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 250ms ease, transform 250ms ease;
-}
-
-.page-enter-from,
-.page-leave-to {
-  opacity: 0;
-  transform: translateY(8px);
-}
 
 /* 响应式
 ----------------------------------------*/

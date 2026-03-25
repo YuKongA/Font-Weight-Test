@@ -36,18 +36,21 @@
       <CustomFontTestDisplay />
     </section>
   </main>
+  <AppFooter />
 </template>
 
 <script>
 import ComparisonDisplay from '../components/FontComparisonDisplay.vue';
 import CustomFontTestDisplay from '../components/CustomFontTestDisplay.vue';
 import CJKCharacterDisplay from '../components/CJKCharacterDisplay.vue';
+import AppFooter from '../components/AppFooter.vue';
 
 export default {
   components: {
     ComparisonDisplay,
     CustomFontTestDisplay,
-    CJKCharacterDisplay
+    CJKCharacterDisplay,
+    AppFooter
   }
 }
 </script>
