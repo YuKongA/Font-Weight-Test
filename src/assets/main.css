@@ -27,6 +27,8 @@ body {
   color: var(--color-text);
   line-height: 1.45;
   min-height: 100vh;
+  text-autospace: normal;
+  text-spacing-trim: normal;
 }
 
 a {
@@ -380,5 +382,19 @@ a.footer-msg:hover {
 
   .nav-list {
     max-width: 600px;
+  }
+}
+
+/* 窄屏：基础 --nav-font 的 1.8vw 项在 833px 以下始终低于 15px 下限，
+   导致小屏字号恒为 15px、6 个 nowrap 项放不下而被裁切。
+   这里让字号随视口缩小（480px 处仍为 15px，与基础值平滑衔接），并收紧内边距。 */
+@media screen and (max-width: 480px) {
+  :root {
+    --nav-font: clamp(11px, 3.4vw, 15px);
+  }
+
+  .nav-link {
+    padding: 0.4em 0.4em;
+    letter-spacing: 0;
   }
 }
