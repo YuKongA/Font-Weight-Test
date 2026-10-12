@@ -1,49 +1,42 @@
 <template>
   <main>
-    <h2 class="section-title">正常字体</h2>
+    <h2>正常字体</h2>
     <section class="round">
       <div id="serif">
         <ComparisonDisplay
           fontFamily="serif"
           language="en"
           :weightShow="true"
-          :characters="['这是一个示例 ABCDEFG abcdefg 012345']"
+          :characters="normalChars"
         />
       </div>
     </section>
 
-    <h2 class="section-title">倾斜字体</h2>
+    <h2>倾斜字体</h2>
     <section class="round">
       <div id="serif">
         <ComparisonDisplay
           fontFamily="serif"
           language="en"
           :weightShow="true"
-          :characters="['<i>这是一个示例 ABCDEFG abcdefg 012345</i>']"
+          :characters="italicChars"
         />
       </div>
     </section>
 
-    <h2 class="section-title">更多示例</h2>
+    <h2>更多示例</h2>
     <section class="round">
       <div id="serif">
         <MoreDisplay />
       </div>
     </section>
   </main>
-  <AppFooter />
 </template>
 
-<script>
+<script setup>
 import ComparisonDisplay from "../components/FontComparisonDisplay.vue";
 import MoreDisplay from "../components/FontMoreDisplay.vue";
-import AppFooter from "../components/AppFooter.vue";
 
-export default {
-  components: {
-    ComparisonDisplay,
-    MoreDisplay,
-    AppFooter,
-  },
-};
+const normalChars = ["这是一个示例 ABCDEFG abcdefg 012345"];
+const italicChars = ["<i>这是一个示例 ABCDEFG abcdefg 012345</i>"];
 </script>

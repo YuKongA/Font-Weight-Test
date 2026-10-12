@@ -17,17 +17,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    fontFamily: String,
-    weightShow: Boolean,
-    characters: Array,
+<script setup>
+defineProps({
+  fontFamily: {
+    type: String,
+    default: "",
   },
-  data() {
-    return {
-      weights: [100, 200, 300, 350, 400, 500, 600, 700, 800, 900, 950],
-    };
+  weightShow: {
+    type: Boolean,
+    default: false,
   },
-};
+  characters: {
+    type: Array,
+    default: () => [],
+  },
+});
+
+const weights = [100, 200, 300, 350, 400, 500, 600, 700, 800, 900, 950];
 </script>

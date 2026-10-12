@@ -11,7 +11,6 @@
   --side-margin: 5%;
   --title-margin-top: 0.4cm;
   --title-margin-bottom: 0.2cm;
-  --transition: all 0.28s ease;
 }
 
 /* 重置
@@ -59,7 +58,6 @@ a {
   padding: max(12px, env(safe-area-inset-top)) 0 12px;
   background: var(--color-background);
   border-bottom: 1px solid var(--color-border);
-  transition: var(--transition);
 }
 
 .header-inner {
@@ -79,7 +77,6 @@ a {
   white-space: nowrap;
   flex-shrink: 0;
   letter-spacing: 0.2px;
-  transition: var(--transition);
 }
 
 /* 导航
@@ -122,7 +119,7 @@ a {
   letter-spacing: 0.1px;
   border-radius: 8px;
   white-space: nowrap;
-  transition: var(--transition);
+  transition: background-color 0.2s ease, color 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -168,7 +165,6 @@ main {
   font-size: var(--base-font);
   background: var(--color-card-bg);
   box-shadow: 0 4px 12px var(--color-shadow);
-  transition: all 0.6s ease;
 }
 
 .round:not(:last-child) {
@@ -179,12 +175,6 @@ main {
   margin-bottom: 0.15cm;
 }
 
-@media (hover: hover) {
-  .round:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px var(--color-shadow-hover);
-  }
-}
 
 /* 内容区 — 字符表格
 ----------------------------------------*/

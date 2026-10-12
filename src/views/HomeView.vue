@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2 class="section-title">常用字重映射</h2>
+    <h2>常用字重映射</h2>
     <section class="round">
       <p id="sans-serif">
         <span style="font-weight: 100">100 - 淡体 Thin (Hairline)</span><br />
@@ -21,48 +21,39 @@
       </p>
     </section>
 
-    <h2 class="section-title">字重对照展示</h2>
+    <h2>字重对照展示</h2>
     <section class="round">
       <p class="label">设备字体:</p>
       <ComparisonDisplay
         fontFamily="sans-serif"
         language="en"
-        :characters="['永', 'A', '6']"
+        :characters="comparisonCharacters"
       />
       <p class="label" style="font-family: MiSans VF">MiSans VF:</p>
       <ComparisonDisplay
         fontFamily="MiSans VF"
         language="en"
-        :characters="['永', 'A', '6']"
+        :characters="comparisonCharacters"
       />
     </section>
 
-    <h2 class="section-title">典型同字字形</h2>
+    <h2>典型同字字形</h2>
 
     <section class="round">
       <CJKCharacterDisplay />
     </section>
 
-    <h2 class="section-title">详细字体测试</h2>
+    <h2>详细字体测试</h2>
     <section class="round">
       <CustomFontTestDisplay />
     </section>
   </main>
-  <AppFooter />
 </template>
 
-<script>
+<script setup>
 import ComparisonDisplay from "../components/FontComparisonDisplay.vue";
 import CustomFontTestDisplay from "../components/CustomFontTestDisplay.vue";
 import CJKCharacterDisplay from "../components/CJKCharacterDisplay.vue";
-import AppFooter from "../components/AppFooter.vue";
 
-export default {
-  components: {
-    ComparisonDisplay,
-    CustomFontTestDisplay,
-    CJKCharacterDisplay,
-    AppFooter,
-  },
-};
+const comparisonCharacters = ["永", "A", "6"];
 </script>

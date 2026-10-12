@@ -1,38 +1,32 @@
 <template>
   <main>
-    <h2 class="section-title">日文字体</h2>
+    <h2>日文字体</h2>
     <section class="round">
       <div id="sans-serif">
         <ComparisonDisplay
           fontFamily="sans-serif"
           :weightShow="true"
-          :characters="['これは例です <i>これは例です</i>']"
+          :characters="jaChars"
         />
       </div>
     </section>
 
-    <h2 class="section-title">韩文字体</h2>
+    <h2>韩文字体</h2>
     <section class="round">
       <div id="sans-serif">
         <ComparisonDisplay
           fontFamily="sans-serif"
           :weightShow="true"
-          :characters="['이것은例입니다 <i>이것은例입니다</i>']"
+          :characters="koChars"
         />
       </div>
     </section>
   </main>
-  <AppFooter />
 </template>
 
-<script>
+<script setup>
 import ComparisonDisplay from "../components/FontComparisonDisplay.vue";
-import AppFooter from "../components/AppFooter.vue";
 
-export default {
-  components: {
-    ComparisonDisplay,
-    AppFooter,
-  },
-};
+const jaChars = ["これは例です <i>これは例です</i>"];
+const koChars = ["이것은例입니다 <i>이것은例입니다</i>"];
 </script>

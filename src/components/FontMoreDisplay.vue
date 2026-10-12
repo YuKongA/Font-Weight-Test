@@ -16,34 +16,15 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "FontWeightDisplay",
-  data() {
-    return {
-      weights: [100, 200, 300, 350, 400, 500, 600, 700, 800, 900, 950],
-      text: {
-        chinese: "不以物喜，不以己悲。 ——范仲淹《岳阳楼记》",
-        latin: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        latinLower: "abcdefghijklmnopqrstuvwxyz",
-        numbers: "0123456789,.",
-      },
-    };
-  },
-  computed: {
-    sampleText() {
-      return [
-        this.text.chinese,
-        this.text.latin,
-        this.text.latinLower,
-        this.text.numbers,
-      ].join("<br>");
-    },
-    sampleTextItalic() {
-      return `<i>${this.sampleText}</i>`;
-    },
-  },
-};
+<script setup>
+const weights = [100, 200, 300, 350, 400, 500, 600, 700, 800, 900, 950];
+const sampleText = [
+  "不以物喜，不以己悲。 ——范仲淹《岳阳楼记》",
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  "abcdefghijklmnopqrstuvwxyz",
+  "0123456789,.",
+].join("<br>");
+const sampleTextItalic = `<i>${sampleText}</i>`;
 </script>
 
 <style scoped>

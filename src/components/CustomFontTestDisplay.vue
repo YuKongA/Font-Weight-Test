@@ -4,10 +4,11 @@
       <label>字重: {{ fontWeight }}</label>
       <input
         type="range"
-        v-model="fontWeight"
-        v-bind="weightRangeProps"
-        @input="updateRangeStyle('weightRange')"
-        ref="weightRange"
+        v-model.number="fontWeight"
+        min="1"
+        max="999"
+        step="1"
+        :style="weightTrackStyle"
         class="custom-range"
       />
     </div>
@@ -16,10 +17,11 @@
       <label>字号: {{ fontSize }}</label>
       <input
         type="range"
-        v-model="fontSize"
-        v-bind="sizeRangeProps"
-        @input="updateRangeStyle('sizeRange')"
-        ref="sizeRange"
+        v-model.number="fontSize"
+        min="20"
+        max="100"
+        step="1"
+        :style="sizeTrackStyle"
         class="custom-range"
       />
     </div>
@@ -56,11 +58,15 @@
   </div>
 </template>
 
-<script>
-const DEFAULT_FONT_WEIGHT = 400;
-const DEFAULT_FONT_SIZE = 32;
-const DEFAULT_TEXT = "永 A 6";
-const LANGUAGE_OPTIONS = [
+<script setup>
+import { ref, computed } from "vue";
+
+const fontWeight = ref(400);
+const fontSize = ref(32);
+const testText = ref("永 A 6");
+const selectedLang = ref("zh-Hans");
+
+const languageOptions = [
   { value: "zh-Hans", label: "简体中文 (zh-Hans)" },
   { value: "zh-CN", label: "中国大陆 (zh-CN)" },
   { value: "zh-SG", label: "新加坡 (zh-SG)" },
@@ -75,64 +81,20 @@ const LANGUAGE_OPTIONS = [
   { value: "vi", label: "越南 (vi)" },
 ];
 
-export default {
-  data() {
-    return {
-      fontWeight: DEFAULT_FONT_WEIGHT,
-      fontSize: DEFAULT_FONT_SIZE,
-      testText: DEFAULT_TEXT,
-      selectedLang: "zh-Hans",
-      languageOptions: LANGUAGE_OPTIONS,
-    };
-  },
+const weightTrackStyle = computed(() => ({
+  "--val": `${((fontWeight.value - 1) / 998) * 100}%`,
+}));
 
-  computed: {
-    weightRangeProps() {
-      return {
-        min: 1,
-        max: 999,
-        step: 1,
-      };
-    },
+const sizeTrackStyle = computed(() => ({
+  "--val": `${((fontSize.value - 20) / 80) * 100}%`,
+}));
 
-    sizeRangeProps() {
-      return {
-        min: 20,
-        max: 100,
-        step: 1,
-      };
-    },
-
-    previewStyle() {
-      return {
-        fontWeight: this.fontWeight,
-        fontSize: `${this.fontSize}px`,
-        wordWrap: "break-word",
-        whiteSpace: "pre-wrap",
-      };
-    },
-  },
-
-  methods: {
-    updateRangeStyle(refName) {
-      const range = this.$refs[refName];
-      const value = ((range.value - range.min) / (range.max - range.min)) * 100;
-      range.style.background = `linear-gradient(
-                to right, 
-                var(--color-accent) ${value}%,
-                var(--color-nav-bg) ${value}%
-            )`;
-    },
-  },
-
-  mounted() {
-    this.$nextTick(() => {
-      ["weightRange", "sizeRange"].forEach((refName) => {
-        this.updateRangeStyle(refName);
-      });
-    });
-  },
-};
+const previewStyle = computed(() => ({
+  fontWeight: fontWeight.value,
+  fontSize: `${fontSize.value}px`,
+  wordWrap: "break-word",
+  whiteSpace: "pre-wrap",
+}));
 </script>
 
 <style scoped>
@@ -148,7 +110,11 @@ export default {
   border: none;
   cursor: pointer;
   box-shadow: none;
-  background: var(--color-nav-bg);
+  background: linear-gradient(
+    to right,
+    var(--color-accent) var(--val, 0%),
+    var(--color-nav-bg) var(--val, 0%)
+  );
   border-radius: 999px;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
@@ -192,7 +158,7 @@ export default {
   appearance: none;
   height: 30px;
   border-radius: 999px;
-  background: var(--color-nav-bg);
+  background: transparent;
   border: none;
   cursor: pointer;
   box-shadow: none;
@@ -211,7 +177,7 @@ export default {
   color: var(--color-text);
   font-size: 0.9rem;
   text-align: left;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
   margin-bottom: 0;
 }
 
@@ -239,3 +205,4 @@ export default {
   display: block;
 }
 </style>
+

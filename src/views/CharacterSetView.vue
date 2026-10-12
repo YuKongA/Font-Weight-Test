@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2 class="section-title">GB2312 (节选)</h2>
+    <h2>GB2312 (节选)</h2>
     <section class="round">
       <div id="sans-serif">
         <div class="gb-block">
@@ -14,7 +14,7 @@
       </div>
     </section>
 
-    <h2 class="section-title">GBK (节选)</h2>
+    <h2>GBK (节选)</h2>
     <section class="round">
       <div id="sans-serif">
         <div class="gb-block">
@@ -28,7 +28,7 @@
       </div>
     </section>
 
-    <h2 class="section-title">GB18030-2000 (节选)</h2>
+    <h2>GB18030-2000 (节选)</h2>
     <section class="round">
       <div id="sans-serif">
         <div class="gb-block">
@@ -41,127 +41,45 @@
       </div>
     </section>
 
-    <h2 class="section-title">CJK Unified (节选)</h2>
+    <h2>CJK Unified (节选)</h2>
     <section class="round">
       <div id="sans-serif">
         <section class="cjk-columns">
-          <div class="cjk-item">
-            <span class="accent">扩展 A 区:</span
-            ><span class="cjk-text"
-              >㐀 㐁 㐂 㐃 㐄 㐅 㐆 㐇 㐈 㐉 㐊 㐋 㐌 㐍 㐎 㐏</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 B 区:</span
-            ><span class="cjk-text"
-              >𠀀 𠀁 𠀂 𠀃 𠀄 𠀅 𠀆 𠀇 𠀈 𠀉 𠀊 𠀋 𠀌 𠀍 𠀎 𠀏</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2003 新增:</span
-            ><span class="cjk-text"
-              >龦 龧 龨 龩 龪 龫 龬 龭 龮 龯 龰 龱 龲 龳 龴 龵</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 C 区:</span
-            ><span class="cjk-text"
-              >𪜀 𪜁 𪜂 𪜃 𪜄 𪜅 𪜆 𪜇 𪜈 𪜉 𪜊 𪜋 𪜌 𪜍 𪜎 𪜏</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 D 区:</span
-            ><span class="cjk-text"
-              >𫝀 𫝁 𫝂 𫝃 𫝄 𫝅 𫝆 𫝇 𫝈 𫝉 𫝊 𫝋 𫝌 𫝍 𫝎 𫝏</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2012 新增:</span
-            ><span class="cjk-text">鿌</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 E 区:</span
-            ><span class="cjk-text"
-              >𫠠 𫠡 𫠢 𫠣 𫠤 𫠥 𫠦 𫠧 𫠨 𫠩 𫠪 𫠫 𫠬 𫠭 𫠮 𫠯</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2015 "急用汉字":</span
-            ><span class="cjk-text">鿍 鿎 鿏 䲤 鿑 鿒 鿓 鿔 鿕</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 F 区:</span
-            ><span class="cjk-text"
-              >𬺰 𬺱 𬺲 𬺳 𬺴 𬺵 𬺶 𬺷 𬺸 𬺹 𬺺 𬺻 𬺼 𬺽 𬺾 𬺿</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2017 新增:</span
-            ><span class="cjk-text">鿥 鿦 鿧 鿨 鿩 鿪 鿖 鿗 鿙 鿚 鿜 鿠</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2018 新增:</span
-            ><span class="cjk-text">鿫 鿬 鿭 鿮 鿯</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 G 区:</span
-            ><span class="cjk-text"
-              >𰀀 𰀁 𰀂 𰀃 𰀄 𰀅 𰀆 𰀇 𰀈 𰀉 𰀊 𰀋 𰀌 𰀍 𰀎 𰀏</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2021 "急用科学与技术用字":</span
-            ><span class="cjk-text"
-              >鿰 鿱 鿲 鿳 鿴 鿵 鿶 鿷 鿸 鿹 鿺 鿻 鿼</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2021 "10 个需分离的汉字":</span
-            ><span class="cjk-text">䶶 䶷 䶸 䶹 䶺 䶻 䶼 䶽 䶾 䶿</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2021 "昆曲工尺谱用字":</span
-            ><span class="cjk-text">𪛗 𪛘 𪛙 𪛚 𪛛 𪛜 𪛝</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2021 新增:</span
-            ><span class="cjk-text">鿽 鿾 鿿 𪛞 𪛟 𫜵 𫜶 𫜷 𫜸</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 H 区:</span
-            ><span class="cjk-text"
-              >𱍐 𱍑 𱍒 𱍓 𱍔 𱍕 𱍖 𱍗 𱍘 𱍙 𱍚 𱍛 𱍜 𱍝 𱍞 𱍟</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">2022 新增:</span
-            ><span class="cjk-text">𫜹</span>
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 I 区:</span
-            ><span class="cjk-text"
-              >𮯰 𮯱 𮯲 𮯳 𮯴 𮯵 𮯶 𮯷 𮯸 𮯹 𮯺 𮯻 𮯼 𮯽 𮯾 𮯿</span
-            >
-          </div>
-          <div class="cjk-item">
-            <span class="accent">扩展 J 区:</span
-            ><span class="cjk-text"
-              >𲎰 𲎱 𲎲 𲎳 𲎴 𲎵 𲎶 𲎷 𲎸 𲎹 𲎺 𲎻 𲎼 𲎽 𲎾 𲎿</span
-            >
+          <div
+            v-for="item in cjkBlocks"
+            :key="item.label"
+            class="cjk-item"
+          >
+            <span class="accent">{{ item.label }}</span>
+            <span class="cjk-text">{{ item.chars }}</span>
           </div>
         </section>
       </div>
     </section>
   </main>
-  <AppFooter />
 </template>
 
-<script>
-import AppFooter from "../components/AppFooter.vue";
-
-export default {
-  components: {
-    AppFooter,
-  },
-};
+<script setup>
+const cjkBlocks = [
+  { label: "扩展 A 区:", chars: "㐀 㐁 㐂 㐃 㐄 㐅 㐆 㐇 㐈 㐉 㐊 㐋 㐌 㐍 㐎 㐏" },
+  { label: "扩展 B 区:", chars: "𠀀 𠀁 𠀂 𠀃 𠀄 𠀅 𠀆 𠀇 𠀈 𠀉 𠀊 𠀋 𠀌 𠀍 𠀎 𠀏" },
+  { label: "2003 新增:", chars: "龦 龧 龨 龩 龪 龫 龬 龭 龮 龯 龰 龱 龲 龳 龴 龵" },
+  { label: "扩展 C 区:", chars: "𪜀 𪜁 𪜂 𪜃 𪜄 𪜅 𪜆 𪜇 𪜈 𪜉 𪜊 𪜋 𪜌 𪜍 𪜎 𪜏" },
+  { label: "扩展 D 区:", chars: "𫝀 𫝁 𫝂 𫝃 𫝄 𫝅 𫝆 𫝇 𫝈 𫝉 𫝊 𫝋 𫝌 𫝍 𫝎 𫝏" },
+  { label: "2012 新增:", chars: "鿌" },
+  { label: "扩展 E 区:", chars: "𫠠 𫠡 𫠢 𫠣 𫠤 𫠥 𫠦 𫠧 𫠨 𫠩 𫠪 𫠫 𫠬 𫠭 𫠮 𫠯" },
+  { label: '2015 "急用汉字":', chars: "鿍 鿎 鿏 䲤 鿑 鿒 鿓 鿔 鿕" },
+  { label: "扩展 F 区:", chars: "𬺰 𬺱 𬺲 𬺳 𬺴 𬺵 𬺶 𬺷 𬺸 𬺹 𬺺 𬺻 𬺼 𬺽 𬺾 𬺿" },
+  { label: "2017 新增:", chars: "鿥 鿦 鿧 鿨 鿩 鿪 鿖 鿗 鿙 鿚 鿜 鿠" },
+  { label: "2018 新增:", chars: "鿫 鿬 鿭 鿮 鿯" },
+  { label: "扩展 G 区:", chars: "𰀀 𰀁 𰀂 𰀃 𰀄 𰀅 𰀆 𰀇 𰀈 𰀉 𰀊 𰀋 𰀌 𰀍 𰀎 𰀏" },
+  { label: '2021 "急用科学与技术用字":', chars: "鿰 鿱 鿲 鿳 鿴 鿵 鿶 鿷 鿸 鿹 鿺 鿻 鿼" },
+  { label: '2021 "10 个需分离的汉字":', chars: "䶶 䶷 䶸 䶹 䶺 䶻 䶼 䶽 䶾 䶿" },
+  { label: '2021 "昆曲工尺谱用字":', chars: "𪛗 𪛘 𪛙 𪛚 𪛛 𪛜 𪛝" },
+  { label: "2021 新增:", chars: "鿽 鿾 鿿 𪛞 𪛟 𫜵 𫜶 𫜷 𫜸" },
+  { label: "扩展 H 区:", chars: "𱍐 𱍑 𱍒 𱍓 𱍔 𱍕 𱍖 𱍗 𱍘 𱍙 𱍚 𱍛 𱍜 𱍝 𱍞 𱍟" },
+  { label: "2022 新增:", chars: "𫜹" },
+  { label: "扩展 I 区:", chars: "𮯰 𮯱 𮯲 𮯳 𮯴 𮯵 𮯶 𮯷 𮯸 𮯹 𮯺 𮯻 𮯼 𮯽 𮯾 𮯿" },
+  { label: "扩展 J 区:", chars: "𲎰 𲎱 𲎲 𲎳 𲎴 𲎵 𲎶 𲎷 𲎸 𲎹 𲎺 𲎻 𲎼 𲎽 𲎾 𲎿" },
+];
 </script>

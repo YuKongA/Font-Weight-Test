@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick, watch } from "vue";
 import { RouterLink, RouterView, useRouter } from "vue-router";
+import AppFooter from "./components/AppFooter.vue";
 
 const navListRef = ref(null);
 const indicatorStyle = ref({});
@@ -75,6 +76,9 @@ onMounted(() => {
     resizeObserver = new ResizeObserver(() => updateIndicator(true));
     resizeObserver.observe(navListRef.value);
   }
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(() => updateIndicator(true));
+  }
 });
 
 onBeforeUnmount(() => resizeObserver?.disconnect());
@@ -126,11 +130,16 @@ watch(
               >编码</RouterLink
             >
           </li>
-          <div class="nav-indicator" :style="indicatorStyle"></div>
+          <li
+            class="nav-indicator"
+            :style="indicatorStyle"
+            aria-hidden="true"
+          ></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <RouterView />
+  <AppFooter />
 </template>
