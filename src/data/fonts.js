@@ -24,7 +24,7 @@ export const fontOptions = [
   { value: 'sans-serif', label: '无衬线' },
   { value: 'serif', label: '衬线' },
   { value: 'monospace', label: '等宽' },
-  { value: 'MiSans VF', label: 'MiSans VF', detail: '参考' },
+  { value: 'MiSans', label: 'MiSans', detail: '参考' },
 ];
 export const languageOptions = [
   { value: 'en', label: '默认（en）' },

@@ -100,12 +100,21 @@ onBeforeUnmount(() => {
       <select :id="id" :value="modelValue" hidden @change="emit('update:modelValue', $event.target.value)">
         <option v-for="option in options" :key="option.value" :value="option.value">{{ option.label }}</option>
       </select>
-      <button :id="id + '-trigger'" ref="trigger" class="select-trigger" type="button" role="combobox" aria-haspopup="listbox" :aria-expanded="opened" :aria-controls="id + '-menu'" :aria-labelledby="id + '-label ' + id + '-value'" :aria-activedescendant="opened ? id + '-option-' + activeIndex : undefined" @click="opened ? close() : open()" @keydown="onKeydown">
-        <span :id="id + '-value'" class="select-value">{{ selectedLabel }}</span><span class="select-chevron" aria-hidden="true"></span>
+      <button :id="id + '-trigger'" ref="trigger" class="select-trigger" type="button" role="combobox"
+        aria-haspopup="listbox" :aria-expanded="opened" :aria-controls="id + '-menu'"
+        :aria-labelledby="id + '-label ' + id + '-value'"
+        :aria-activedescendant="opened ? id + '-option-' + activeIndex : undefined" @click="opened ? close() : open()"
+        @keydown="onKeydown">
+        <span :id="id + '-value'" class="select-value">{{ selectedLabel }}</span><span class="select-chevron"
+          aria-hidden="true"></span>
       </button>
-      <div :id="id + '-menu'" ref="menu" class="select-menu" role="listbox" :aria-labelledby="id + '-label'" :hidden="!opened" :style="{ maxHeight: maxHeight + 'px' }" @pointerdown.prevent>
-        <div v-for="(option, index) in options" :id="id + '-option-' + index" :key="option.value" class="select-option" :class="{ 'is-active': index === activeIndex }" role="option" :data-value="option.value" :aria-selected="modelValue === option.value" @pointermove="highlight(index)" @click="choose(index)">
-          <span>{{ option.label }}</span><code>{{ option.detail ?? option.value }}</code><span class="select-check" aria-hidden="true"></span>
+      <div :id="id + '-menu'" ref="menu" class="select-menu" role="listbox" :aria-labelledby="id + '-label'"
+        :hidden="!opened" :style="{ maxHeight: maxHeight + 'px' }" @pointerdown.prevent>
+        <div v-for="(option, index) in options" :id="id + '-option-' + index" :key="option.value" class="select-option"
+          :class="{ 'is-active': index === activeIndex }" role="option" :data-value="option.value"
+          :aria-selected="modelValue === option.value" @pointermove="highlight(index)" @click="choose(index)">
+          <span>{{ option.label }}</span><code>{{ option.detail ?? option.value }}</code><span class="select-check"
+            aria-hidden="true"></span>
         </div>
       </div>
     </div>

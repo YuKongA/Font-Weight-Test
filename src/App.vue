@@ -18,13 +18,13 @@ const currentPage = computed(() => navigation.find(item => item.to === route.pat
 const theme = ref(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
 const themeLabel = computed(() => '切换至' + (theme.value === 'dark' ? '浅' : '深') + '色模式');
 let manualTheme = false;
-try { manualTheme = ['light', 'dark'].includes(localStorage.getItem('font-design-theme')); } catch {}
+try { manualTheme = ['light', 'dark'].includes(localStorage.getItem('font-design-theme')); } catch { }
 const systemTheme = matchMedia('(prefers-color-scheme: dark)');
 
 function toggleTheme() {
   manualTheme = true;
   theme.value = theme.value === 'light' ? 'dark' : 'light';
-  try { localStorage.setItem('font-design-theme', theme.value); } catch {}
+  try { localStorage.setItem('font-design-theme', theme.value); } catch { }
 }
 function syncSystemTheme(event) {
   if (!manualTheme) theme.value = event.matches ? 'dark' : 'light';
@@ -50,10 +50,12 @@ onBeforeUnmount(() => systemTheme.removeEventListener('change', syncSystemTheme)
         <span class="brand-copy"><strong>字体字重测试</strong><span>FONT WEIGHT TEST</span></span>
       </RouterLink>
       <div class="header-actions">
-        <button id="theme-toggle" class="icon-button" type="button" :aria-label="themeLabel" :title="themeLabel" @click="toggleTheme">
+        <button id="theme-toggle" class="icon-button" type="button" :aria-label="themeLabel" :title="themeLabel"
+          @click="toggleTheme">
           <UiIcon :name="theme === 'dark' ? 'sun' : 'moon'" />
         </button>
-        <a class="icon-button github-link" href="https://github.com/YuKongA/Font-Weight-Test" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+        <a class="icon-button github-link" href="https://github.com/YuKongA/Font-Weight-Test" target="_blank"
+          rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
           <UiIcon name="github" />
         </a>
       </div>
@@ -66,7 +68,9 @@ onBeforeUnmount(() => systemTheme.removeEventListener('change', syncSystemTheme)
   </header>
   <main id="main" ref="main" class="main-container" tabindex="-1" lang="zh-CN">
     <h1 id="page-title" class="sr-only">{{ currentPage.title }}</h1>
-    <div id="page-content"><RouterView :key="$route.path" /></div>
+    <div id="page-content">
+      <RouterView :key="$route.path" />
+    </div>
     <AppFooter />
   </main>
 </template>
