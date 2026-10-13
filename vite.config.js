@@ -18,8 +18,15 @@ export default defineConfig({
     __VUE_OPTIONS_API__: false,
     __VUE_PROD_DEVTOOLS__: false,
   },
+  esbuild: {
+    legalComments: 'none',
+    drop: ['console', 'debugger'],
+  },
   build: {
     target: 'es2022',
     cssMinify: 'lightningcss',
+    modulePreload: {
+      polyfill: false,
+    },
   },
 })

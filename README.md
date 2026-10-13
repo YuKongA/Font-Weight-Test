@@ -4,7 +4,12 @@
 
 本仓库使用 [Vue](https://vuejs.org/) + [Vite](https://vitejs.dev/) 创建
 
+## 更新记录
+
 ```
+2026.10.13
+- 用完整的新设计替换旧界面
+
 2026.03.24
 - 编码页添加 CJK 回退字体列表, 改善稀有汉字显示
 - 修复 Vercel SPA 路由: rewrites 替代 redirects

@@ -1,32 +1,31 @@
-<template>
-  <main>
-    <h2>日文字体</h2>
-    <section class="round">
-      <div id="sans-serif">
-        <ComparisonDisplay
-          fontFamily="sans-serif"
-          :weightShow="true"
-          :characters="jaChars"
-        />
-      </div>
-    </section>
-
-    <h2>韩文字体</h2>
-    <section class="round">
-      <div id="sans-serif">
-        <ComparisonDisplay
-          fontFamily="sans-serif"
-          :weightShow="true"
-          :characters="koChars"
-        />
-      </div>
-    </section>
-  </main>
-</template>
-
 <script setup>
-import ComparisonDisplay from "../components/FontComparisonDisplay.vue";
-
-const jaChars = ["これは例です <i>これは例です</i>"];
-const koChars = ["이것은例입니다 <i>이것은例입니다</i>"];
+import ContentSection from '../components/ContentSection.vue';
+import { weights } from '../data/fonts';
+const languages = [
+  { label: '日文', text: 'これは例です' },
+  { label: '韩文', text: '이것은例입니다' },
+];
 </script>
+
+<template>
+  <ContentSection id="language-weights" number="01" title="日韩字重对照">
+    <div class="language-tests">
+      <article v-for="language in languages" :key="language.label" class="language-test">
+        <div class="language-test-heading"><h3>{{ language.label }}</h3><span>sans-serif</span></div>
+        <table class="language-weight-table">
+          <colgroup><col class="language-weight-column"><col></colgroup>
+          <thead class="sr-only"><tr><th scope="col">字重</th><th scope="col">样本</th></tr></thead>
+          <tbody>
+            <tr v-for="weight in weights" :key="weight" :class="{ 'standard-weight': weight === 400 }">
+              <th scope="row">{{ weight }}</th>
+              <td lang="en" :style="{ fontWeight: weight }"><div class="language-samples">
+                <span class="language-upright" title="正体">{{ language.text }}</span>
+                <span class="language-italic" title="斜体">{{ language.text }}</span>
+              </div></td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </div>
+  </ContentSection>
+</template>

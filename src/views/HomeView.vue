@@ -1,59 +1,27 @@
-<template>
-  <main>
-    <h2>常用字重映射</h2>
-    <section class="round">
-      <p id="sans-serif">
-        <span style="font-weight: 100">100 - 淡体 Thin (Hairline)</span><br />
-        <span style="font-weight: 200">200 - 特细 ExtraLight (UltraLight)</span
-        ><br />
-        <span style="font-weight: 300">300 - 细体 Light</span><br />
-        <span style="font-weight: 350">350 - 次细 DemiLight</span><br />
-        <span style="font-weight: 400">400 - 标准 Normal (Regular)</span><br />
-        <span style="font-weight: 500">500 - 适中 Medium</span><br />
-        <span style="font-weight: 600">600 - 次粗 SemiBold (DemiBold)</span
-        ><br />
-        <span style="font-weight: 700">700 - 粗体 Bold</span><br />
-        <span style="font-weight: 800">800 - 特粗 ExtraBold (UltraBold)</span
-        ><br />
-        <span style="font-weight: 900">900 - 浓体 Black (Heavy)</span><br />
-        <span style="font-weight: 950">950 - 特浓 ExtraBlack (UltraBlack)</span
-        ><br />
-      </p>
-    </section>
-
-    <h2>字重对照展示</h2>
-    <section class="round">
-      <p class="label">设备字体:</p>
-      <ComparisonDisplay
-        fontFamily="sans-serif"
-        language="en"
-        :characters="comparisonCharacters"
-      />
-      <p class="label" style="font-family: MiSans VF">MiSans VF:</p>
-      <ComparisonDisplay
-        fontFamily="MiSans VF"
-        language="en"
-        :characters="comparisonCharacters"
-      />
-    </section>
-
-    <h2>典型同字字形</h2>
-
-    <section class="round">
-      <CJKCharacterDisplay />
-    </section>
-
-    <h2>详细字体测试</h2>
-    <section class="round">
-      <CustomFontTestDisplay />
-    </section>
-  </main>
-</template>
-
 <script setup>
-import ComparisonDisplay from "../components/FontComparisonDisplay.vue";
-import CustomFontTestDisplay from "../components/CustomFontTestDisplay.vue";
-import CJKCharacterDisplay from "../components/CJKCharacterDisplay.vue";
+import { ref } from 'vue';
+import ContentSection from '../components/ContentSection.vue';
+import WeightMapping from '../components/WeightMapping.vue';
+import FontComparisonDisplay from '../components/FontComparisonDisplay.vue';
+import CJKCharacterDisplay from '../components/CJKCharacterDisplay.vue';
+import CustomFontTestDisplay from '../components/CustomFontTestDisplay.vue';
+import UiIcon from '../components/UiIcon.vue';
 
-const comparisonCharacters = ["永", "A", "6"];
+const playgroundRef = ref(null);
 </script>
+
+<template>
+  <div class="dashboard">
+    <ContentSection id="weight-mapping" number="01" title="常用字重"><WeightMapping /></ContentSection>
+    <ContentSection id="weight-comparison" number="02" title="字重对照"><FontComparisonDisplay /></ContentSection>
+    <ContentSection id="glyph-comparison" number="03" title="同字异形"><CJKCharacterDisplay /></ContentSection>
+    <ContentSection id="font-playground" number="04" title="自由试字">
+      <template #actions>
+        <button id="reset" class="icon-button control-icon" type="button" aria-label="重置" title="重置" @click="playgroundRef?.reset">
+          <UiIcon name="reset" />
+        </button>
+      </template>
+      <CustomFontTestDisplay ref="playgroundRef" />
+    </ContentSection>
+  </div>
+</template>

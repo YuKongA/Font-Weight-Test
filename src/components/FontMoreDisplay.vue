@@ -1,38 +1,17 @@
-<template>
-  <div class="font-weight-display">
-    <p
-      v-for="(weight, index) in weights"
-      :key="weight"
-      :style="{ fontWeight: weight }"
-      :class="{
-        'mb-xl': true,
-        'mb-0': index === weights.length - 1,
-      }"
-    >
-      <span class="weight-label mb-sm">-{{ weight }}-</span>
-      <span v-html="sampleText"></span><br />
-      <span v-html="sampleTextItalic"></span>
-    </p>
-  </div>
-</template>
-
 <script setup>
-const weights = [100, 200, 300, 350, 400, 500, 600, 700, 800, 900, 950];
-const sampleText = [
-  "不以物喜，不以己悲。 ——范仲淹《岳阳楼记》",
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  "abcdefghijklmnopqrstuvwxyz",
-  "0123456789,.",
-].join("<br>");
-const sampleTextItalic = `<i>${sampleText}</i>`;
+import { weightDefinitions } from '../data/fonts';
+defineProps({ family: { type: String, required: true } });
+const samples = weightDefinitions.filter(item => [300, 400, 700].includes(item.weight));
 </script>
 
-<style scoped>
-.font-weight-display {
-  text-align: center;
-}
-
-.weight-label {
-  display: block;
-}
-</style>
+<template>
+  <div class="panel reading-grid">
+    <article v-for="item in samples" :key="item.weight" class="reading-card" :style="{ fontFamily: family, fontWeight: item.weight }" lang="en">
+      <h3>{{ item.weight }} · {{ item.name }} / {{ item.english }}</h3>
+      <p>不以物喜，<br>不以己悲。</p>
+      <p class="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz<br>0123456789 , . : ; ! ?</p>
+      <p v-if="family === 'monospace'" class="alphabet">const weight = 400;<br>if (type === "mono") {<br>&nbsp;&nbsp;return "Aa 06";<br>}</p>
+      <p v-else class="alphabet" style="font-style: italic">The quick brown fox jumps over the lazy dog.</p>
+    </article>
+  </div>
+</template>

@@ -1,37 +1,20 @@
+<script setup>
+import { weights, comparisonSamples } from '../data/fonts';
+import { comparisonSelection } from '../composables/usePreviewSettings';
+import WeightComparisonMatrix from './WeightComparisonMatrix.vue';
+</script>
+
 <template>
-  <div>
-    <p :style="{ fontFamily: fontFamily }">
-      <template v-for="(char, index) in characters" :key="index">
-        <span
-          v-for="weight in weights"
-          :key="`${index}-${weight}`"
-          :style="{ fontWeight: weight }"
-        >
-          <span v-if="weightShow">{{ weight }} - </span>
-          <span v-html="char"></span>
-          <br v-if="weightShow" />
-        </span>
-        <br v-if="!weightShow" />
-      </template>
-    </p>
+  <div class="comparison-board">
+    <div class="comparison-tools">
+      <div class="comparison-options content-tabs" role="group" aria-label="对照字形">
+        <button v-for="(sample, key) in comparisonSamples" :key="key" type="button" :data-comparison="key" :aria-pressed="comparisonSelection === key" @click="comparisonSelection = key">{{ sample.label }}</button>
+      </div>
+    </div>
+    <div class="comparison-wide"><WeightComparisonMatrix :weights="weights" :text="comparisonSamples[comparisonSelection].text" /></div>
+    <div class="comparison-narrow">
+      <WeightComparisonMatrix :weights="weights.slice(0, 6)" :text="comparisonSamples[comparisonSelection].text" />
+      <WeightComparisonMatrix :weights="weights.slice(6)" :text="comparisonSamples[comparisonSelection].text" />
+    </div>
   </div>
 </template>
-
-<script setup>
-defineProps({
-  fontFamily: {
-    type: String,
-    default: "",
-  },
-  weightShow: {
-    type: Boolean,
-    default: false,
-  },
-  characters: {
-    type: Array,
-    default: () => [],
-  },
-});
-
-const weights = [100, 200, 300, 350, 400, 500, 600, 700, 800, 900, 950];
-</script>

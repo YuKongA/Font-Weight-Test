@@ -9,23 +9,26 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: '首页',
+      name: '概览',
       component: HomeView
     },
     {
       path: '/sans-serif',
       name: '无衬线',
-      component: () => import('../views/SansSerifView.vue')
+      component: () => import('../views/FontSpecimenView.vue'),
+      props: { family: 'sans-serif' }
     },
     {
       path: '/serif',
       name: '衬线',
-      component: () => import('../views/SerifView.vue')
+      component: () => import('../views/FontSpecimenView.vue'),
+      props: { family: 'serif' }
     },
     {
       path: '/monospace',
       name: '等宽',
-      component: () => import('../views/MonospaceView.vue')
+      component: () => import('../views/FontSpecimenView.vue'),
+      props: { family: 'monospace' }
     },
     {
       path: '/ja-ko',

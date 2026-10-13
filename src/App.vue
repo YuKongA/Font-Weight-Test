@@ -1,145 +1,72 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, nextTick, watch } from "vue";
-import { RouterLink, RouterView, useRouter } from "vue-router";
-import AppFooter from "./components/AppFooter.vue";
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { RouterLink, RouterView, useRoute } from 'vue-router';
+import AppFooter from './components/AppFooter.vue';
+import UiIcon from './components/UiIcon.vue';
 
-const navListRef = ref(null);
-const indicatorStyle = ref({});
-const router = useRouter();
-let baseWidth = 0;
-let baseLeft = 0;
-let resizeObserver = null;
+const navigation = [
+  { to: '/', label: '概览', icon: 'overview', title: '概览' },
+  { to: '/sans-serif', label: '无衬线', icon: 'sans', title: '无衬线' },
+  { to: '/serif', label: '衬线', icon: 'serif', title: '衬线' },
+  { to: '/monospace', label: '等宽', icon: 'mono', title: '等宽' },
+  { to: '/ja-ko', label: '日韩', icon: 'languages', title: '日韩' },
+  { to: '/character-set', label: '编码', icon: 'characters', title: '编码' },
+];
+const route = useRoute();
+const main = ref(null);
+const currentPage = computed(() => navigation.find(item => item.to === route.path) ?? navigation[0]);
+const theme = ref(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+const themeLabel = computed(() => '切换至' + (theme.value === 'dark' ? '浅' : '深') + '色模式');
+let manualTheme = false;
+try { manualTheme = ['light', 'dark'].includes(localStorage.getItem('font-design-theme')); } catch {}
+const systemTheme = matchMedia('(prefers-color-scheme: dark)');
 
-function updateIndicator(reset = false) {
-  const list = navListRef.value;
-  if (!list) return;
-  const active = list.querySelector(".active");
-  if (!active) {
-    indicatorStyle.value = { opacity: 0 };
-    return;
-  }
-  const listRect = list.getBoundingClientRect();
-  const activeRect = active.getBoundingClientRect();
-  const left = activeRect.left - listRect.left;
-  const top = activeRect.top - listRect.top;
-  const width = activeRect.width;
-  const height = activeRect.height;
-
-  // 宽度为 0 时不要建立基准，否则后续 scaleX(width / 0) 会得到 Infinity
-  if (!width) return;
-
-  // reset 时（窗口尺寸变化、字体加载回流等）以当前几何重新建立基准并瞬时吸附；
-  // 路由切换时走 else 分支，省略 transition 让 CSS 的 transform 过渡产生滑动动画。
-  if (reset || !baseWidth) {
-    baseWidth = width;
-    baseLeft = left;
-    indicatorStyle.value = {
-      width: `${width}px`,
-      height: `${height}px`,
-      top: `${top}px`,
-      left: `${left}px`,
-      transform: "translateX(0) scaleX(1)",
-      transition: "none",
-      opacity: 1,
-    };
-  } else {
-    indicatorStyle.value = {
-      width: `${baseWidth}px`,
-      height: `${height}px`,
-      top: `${top}px`,
-      left: `${baseLeft}px`,
-      transform: `translateX(${left - baseLeft}px) scaleX(${width / baseWidth})`,
-      opacity: 1,
-    };
-  }
+function toggleTheme() {
+  manualTheme = true;
+  theme.value = theme.value === 'light' ? 'dark' : 'light';
+  try { localStorage.setItem('font-design-theme', theme.value); } catch {}
 }
-
-onMounted(() => {
-  router.isReady().then(() => {
-    nextTick(() => updateIndicator(true));
-    // 浏览器空闲时预加载所有懒加载页面
-    const prefetch = () => {
-      router.getRoutes().forEach((route) => {
-        if (typeof route.components?.default === "function") {
-          route.components.default();
-        }
-      });
-    };
-    if ("requestIdleCallback" in window) {
-      requestIdleCallback(prefetch);
-    } else {
-      setTimeout(prefetch, 1000);
-    }
-  });
-  // 监听导航栏尺寸变化（窗口缩放、断点切换、字体加载回流），重新对齐指示条
-  if (typeof ResizeObserver !== "undefined" && navListRef.value) {
-    resizeObserver = new ResizeObserver(() => updateIndicator(true));
-    resizeObserver.observe(navListRef.value);
+function syncSystemTheme(event) {
+  if (!manualTheme) theme.value = event.matches ? 'dark' : 'light';
+}
+watch(theme, value => { document.documentElement.dataset.theme = value; }, { immediate: true });
+watch(() => route.path, async (_, previous) => {
+  document.title = currentPage.value.title + ' · 字体字重测试';
+  if (previous !== undefined) {
+    await nextTick();
+    main.value?.focus({ preventScroll: true });
   }
-  if (document.fonts?.ready) {
-    document.fonts.ready.then(() => updateIndicator(true));
-  }
-});
-
-onBeforeUnmount(() => resizeObserver?.disconnect());
-
-watch(
-  () => router.currentRoute.value.path,
-  () => {
-    nextTick(() => updateIndicator());
-  },
-);
+}, { immediate: true });
+onMounted(() => systemTheme.addEventListener('change', syncSystemTheme));
+onBeforeUnmount(() => systemTheme.removeEventListener('change', syncSystemTheme));
 </script>
 
 <template>
-  <header class="app-header">
+  <a class="skip-link" href="#main">跳转到内容</a>
+  <header class="site-header" lang="zh-CN">
     <div class="header-inner">
-      <h1 class="brand">字体字重测试</h1>
-      <nav aria-label="导航">
-        <ul class="nav-list" ref="navListRef">
-          <li>
-            <RouterLink class="nav-link" active-class="active" to="/"
-              >首页</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink class="nav-link" active-class="active" to="/sans-serif"
-              >无衬线</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink class="nav-link" active-class="active" to="/serif"
-              >衬线</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink class="nav-link" active-class="active" to="/monospace"
-              >等宽</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink class="nav-link" active-class="active" to="/ja-ko"
-              >日韩</RouterLink
-            >
-          </li>
-          <li>
-            <RouterLink
-              class="nav-link"
-              active-class="active"
-              to="/character-set"
-              >编码</RouterLink
-            >
-          </li>
-          <li
-            class="nav-indicator"
-            :style="indicatorStyle"
-            aria-hidden="true"
-          ></li>
-        </ul>
-      </nav>
+      <RouterLink class="brand" to="/">
+        <span class="brand-mark" aria-hidden="true" lang="en">A<span>a</span></span>
+        <span class="brand-copy"><strong>字体字重测试</strong><span>FONT WEIGHT TEST</span></span>
+      </RouterLink>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-button" type="button" :aria-label="themeLabel" :title="themeLabel" @click="toggleTheme">
+          <UiIcon :name="theme === 'dark' ? 'sun' : 'moon'" />
+        </button>
+        <a class="icon-button github-link" href="https://github.com/YuKongA/Font-Weight-Test" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+          <UiIcon name="github" />
+        </a>
+      </div>
     </div>
+    <nav class="navigation" aria-label="分类导航">
+      <RouterLink v-for="item in navigation" :key="item.to" :to="item.to" :data-page="item.icon">
+        <UiIcon class="nav-icon" :name="item.icon" />{{ item.label }}
+      </RouterLink>
+    </nav>
   </header>
-
-  <RouterView />
-  <AppFooter />
+  <main id="main" ref="main" class="main-container" tabindex="-1" lang="zh-CN">
+    <h1 id="page-title" class="sr-only">{{ currentPage.title }}</h1>
+    <div id="page-content"><RouterView :key="$route.path" /></div>
+    <AppFooter />
+  </main>
 </template>

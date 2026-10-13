@@ -3,9 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light dark">
+  <script>
+    try {
+      const t = localStorage.getItem('font-design-theme');
+      document.documentElement.dataset.theme = (t === 'light' || t === 'dark') ? t : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch {
+      document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+  </script>
   <meta name="description" content="字体字重测试 - Font Weight Test">
   <link rel="dns-prefetch" href="https://cdn-font.hyperos.mi.com">
   <link rel="preconnect" href="https://cdn-font.hyperos.mi.com" crossorigin>
