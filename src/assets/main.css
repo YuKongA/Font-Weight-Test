@@ -181,10 +181,13 @@ code {
 .brand-copy strong {
   font-size: 17px;
   font-weight: 650;
+  line-height: 1.15;
 }
 
 .brand-copy>span {
   font-size: 11px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
   color: var(--muted);
 }
 
